@@ -326,6 +326,20 @@
         </div>
 
         <div class="filter-section">
+            <span class="filter-label">Media / Content Type</span>
+            <div class="filter-group" id="media-type-filters">
+                <button class="filter-btn active" data-type="" onclick="setMediaTypeFilter('')">All</button>
+                <button class="filter-btn" data-type="photo" onclick="setMediaTypeFilter('photo')">Photo</button>
+                <button class="filter-btn" data-type="video" onclick="setMediaTypeFilter('video')">Video</button>
+                <button class="filter-btn" data-type="exterior" onclick="setMediaTypeFilter('exterior')">Exterior</button>
+                <button class="filter-btn" data-type="interior" onclick="setMediaTypeFilter('interior')">Interior</button>
+                <button class="filter-btn" data-type="license" onclick="setMediaTypeFilter('license')">License</button>
+                <button class="filter-btn" data-type="menu" onclick="setMediaTypeFilter('menu')">Menu</button>
+                <button class="filter-btn" data-type="other" onclick="setMediaTypeFilter('other')">Other</button>
+            </div>
+        </div>
+
+        <div class="filter-section">
             <span class="filter-label">By Tag</span>
             <div class="filter-group" id="tag-filters">
                 <button class="filter-btn" data-tag="" onclick="setTagFilter('')">All tags</button>
@@ -3773,6 +3787,7 @@
     let currentPOIs = [];
     let activeFilter = 'all';
     let activeTagFilter = '';
+    let activeMediaTypeFilter = '';
     let searchQuery = '';
 
     let lbCurrentPOI = null;
@@ -3859,7 +3874,19 @@
                 matchesTag = p.mediaLinks.some(m => m.href && m.href !== '#' && (userTags[m.href] || []).includes(activeTagFilter));
             }
 
-            return matchesSearch && matchesGlobal && matchesTag;
+            let matchesMediaType = true;
+            if(activeMediaTypeFilter) {
+                const mediaOnly = p.mediaLinks.filter(m => !m.isPublic && m.href && m.href !== '#');
+                if(activeMediaTypeFilter === 'photo') {
+                    matchesMediaType = mediaOnly.some(m => !m.isVideo);
+                } else if(activeMediaTypeFilter === 'video') {
+                    matchesMediaType = mediaOnly.some(m => m.isVideo);
+                } else {
+                    matchesMediaType = mediaOnly.some(m => (userTags[m.href] || []).includes(activeMediaTypeFilter));
+                }
+            }
+
+            return matchesSearch && matchesGlobal && matchesTag && matchesMediaType;
         });
 
         container.innerHTML = filtered.map(p => {
@@ -3925,6 +3952,12 @@
     function setFilter(f) {
         activeFilter = f;
         document.querySelectorAll('.filter-btn[data-filter]').forEach(btn => btn.classList.toggle('active', btn.dataset.filter === f));
+        renderGrid();
+    }
+
+    function setMediaTypeFilter(t) {
+        activeMediaTypeFilter = t;
+        document.querySelectorAll('.filter-btn[data-type]').forEach(btn => btn.classList.toggle('active', btn.dataset.type === t));
         renderGrid();
     }
 
