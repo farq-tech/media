@@ -1,4 +1,5 @@
 {
   "buildCommand": "python build_enhanced.py",
+  "outputDirectory": ".",
   "rewrites": [{"source": "/", "destination": "/alnafl_media_review.html"}]
 }
