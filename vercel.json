@@ -1,5 +1,4 @@
 {
-  "rewrites": [
-    { "source": "/", "destination": "/alnafl_media_review.html" }
-  ]
+  "buildCommand": "python build_enhanced.py",
+  "rewrites": [{"source": "/", "destination": "/alnafl_media_review.html"}]
 }
