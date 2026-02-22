@@ -496,7 +496,12 @@ template = '''<!DOCTYPE html>
                 } else if(activeMediaTypeFilter === 'video') {
                     matchesMediaType = mediaOnly.some(m => m.isVideo);
                 } else {
-                    matchesMediaType = mediaOnly.some(m => (userTags[m.href] || []).includes(activeMediaTypeFilter));
+                    matchesMediaType = mediaOnly.some(m =>
+                        (userTags[m.href] || []).includes(activeMediaTypeFilter) ||
+                        m.href.toLowerCase().includes(activeMediaTypeFilter + '_') ||
+                        m.href.toLowerCase().includes(activeMediaTypeFilter + '-') ||
+                        m.href.toLowerCase().includes(activeMediaTypeFilter + '.')
+                    );
                 }
             }
 
