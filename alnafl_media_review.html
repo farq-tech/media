@@ -3894,8 +3894,23 @@
             return matchesSearch && matchesGlobal && matchesTag && matchesMediaType;
         });
 
+        function matchesTypeFilter(href, filterType) {
+            if (!filterType) return false;
+            const h = href.toLowerCase();
+            const userTags = JSON.parse(localStorage.getItem(LOCAL_TAGS_KEY) || '{}');
+            return (userTags[href] || []).includes(filterType) ||
+                h.includes(filterType + '_') || h.includes(filterType + '-') || h.includes(filterType + '.');
+        }
+
         container.innerHTML = filtered.map(p => {
-            const mediaOnly = p.mediaLinks.filter(m => !m.isPublic && m.href && m.href !== '#');
+            let mediaOnly = p.mediaLinks.filter(m => !m.isPublic && m.href && m.href !== '#');
+            if (activeMediaTypeFilter && activeMediaTypeFilter !== 'photo' && activeMediaTypeFilter !== 'video') {
+                mediaOnly.sort((a, b) => {
+                    const aMatch = matchesTypeFilter(a.href, activeMediaTypeFilter) ? 0 : 1;
+                    const bMatch = matchesTypeFilter(b.href, activeMediaTypeFilter) ? 0 : 1;
+                    return aMatch - bMatch;
+                });
+            }
             const photoCount = mediaOnly.filter(m => !m.isVideo).length;
             const videoCount = mediaOnly.filter(m => m.isVideo).length;
             const mediaCountLabel = photoCount && videoCount
