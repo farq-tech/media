@@ -3394,4 +3394,495 @@
     <a href="#" title="File not found" target="_blank" class="video">Video 1</a>
   </div>
 </div>
-
+<div class="poi" data-media="1" data-district="alwadi">
+  <h3>آير</h3>
+  <div class="meta">life_convenience | open | Media: 2</div>
+  <div class="media-grid">
+    <a href="https://res.cloudinary.com/dn3bxmi9r/video/upload/v1771755882/alwadi_media/IMG_8105_2.mov" target="_blank" class="video">Video 1</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/video/upload/v1771755887/alwadi_media/IMG_8107_3.mov" target="_blank" class="video">Video 2</a>
+  </div>
+</div>
+<div class="poi" data-media="1" data-district="alwadi">
+  <h3>أحلا لبس للمستلزمات الرجالية</h3>
+  <div class="meta">life_convenience | open | Media: 4</div>
+  <div class="media-grid">
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771755892/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A8%D9%A4%D9%A9%D9%A0%D9%A6_5.jpg" target="_blank">Photo 1</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771755894/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A8%D9%A5%D9%A0%D9%A3%D9%A1_6.jpg" target="_blank">Photo 2</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/video/upload/v1771755898/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A8%D9%A5%D9%A0%D9%A4%D9%A1_7.mp4" target="_blank" class="video">Video 1</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771755901/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A8%D9%A5%D9%A0%D9%A5%D9%A6_8.jpg" target="_blank">Photo 3</a>
+  </div>
+</div>
+<div class="poi" data-media="1" data-district="alwadi">
+  <h3>أنوفا</h3>
+  <div class="meta">life_convenience | open | Media: 1</div>
+  <div class="media-grid">
+    <a href="https://res.cloudinary.com/dn3bxmi9r/video/upload/v1771755916/alwadi_media/IMG_8108_15.mov" target="_blank" class="video">Video 1</a>
+  </div>
+</div>
+<div class="poi" data-media="1" data-district="alwadi">
+  <h3>ابل شوب للاتصالات</h3>
+  <div class="meta">life_convenience | open | Media: 3</div>
+  <div class="media-grid">
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771755929/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A9%D9%A1%D9%A9%D9%A5%D9%A1_22.jpg" target="_blank">Photo 1</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771755931/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A9%D9%A2%D9%A0%D9%A0%D9%A2_23.jpg" target="_blank">Photo 2</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/video/upload/v1771755935/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A9%D9%A2%D9%A0%D9%A1%D9%A1_24.mp4" target="_blank" class="video">Video 1</a>
+  </div>
+</div>
+<div class="poi" data-media="1" data-district="alwadi">
+  <h3>احلا لبس للرياضة</h3>
+  <div class="meta">life_convenience | open | Media: 4</div>
+  <div class="media-grid">
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771755946/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A8%D9%A5%D9%A6%D9%A4%D9%A4_29.jpg" target="_blank">Photo 1</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771755947/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A8%D9%A5%D9%A8%D9%A3%D9%A3_30.jpg" target="_blank">Photo 2</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/video/upload/v1771755951/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A8%D9%A5%D9%A8%D9%A4%D9%A0_31.mp4" target="_blank" class="video">Video 1</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771755953/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A8%D9%A5%D9%A8%D9%A5%D9%A6_32.jpg" target="_blank">Photo 3</a>
+  </div>
+</div>
+<div class="poi" data-media="1" data-district="alwadi">
+  <h3>احمد العجاجي للوازم الرحلات</h3>
+  <div class="meta">life_convenience | open | Media: 3</div>
+  <div class="media-grid">
+    <a href="https://res.cloudinary.com/dn3bxmi9r/video/upload/v1771755962/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A9%D9%A1%D9%A4%D9%A1%D9%A9_36.mp4" target="_blank" class="video">Video 1</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771755965/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A9%D9%A1%D9%A4%D9%A4%D9%A2_37.jpg" target="_blank">Photo 1</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771755966/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A9%D9%A1%D9%A4%D9%A4%D9%A9_38.jpg" target="_blank">Photo 2</a>
+  </div>
+</div>
+<div class="poi" data-media="1" data-district="alwadi">
+  <h3>التويجري</h3>
+  <div class="meta">life_convenience | open | Media: 1</div>
+  <div class="media-grid">
+    <a href="https://res.cloudinary.com/dn3bxmi9r/video/upload/v1771755991/alwadi_media/IMG_8097_50.mov" target="_blank" class="video">Video 1</a>
+  </div>
+</div>
+<div class="poi" data-media="1" data-district="alwadi">
+  <h3>الفارابي لطب و تقويم الأسنان</h3>
+  <div class="meta">life_convenience | open | Media: 4</div>
+  <div class="media-grid">
+    <a href="https://res.cloudinary.com/dn3bxmi9r/video/upload/v1771756024/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A9%D9%A4%D9%A4%D9%A2%D9%A8_68.mp4" target="_blank" class="video">Video 1</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756026/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A9%D9%A4%D9%A4%D9%A5%D9%A4_69.jpg" target="_blank">Photo 1</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756028/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A9%D9%A4%D9%A5%D9%A3%D9%A2_70.jpg" target="_blank">Photo 2</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756030/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A9%D9%A4%D9%A5%D9%A5%D9%A7_71.jpg" target="_blank">Photo 3</a>
+  </div>
+</div>
+<div class="poi" data-media="1" data-district="alwadi">
+  <h3>باسكن روبنز</h3>
+  <div class="meta">life_convenience | open | Media: 1</div>
+  <div class="media-grid">
+    <a href="https://res.cloudinary.com/dn3bxmi9r/video/upload/v1771756080/alwadi_media/b2340bd2-f444-480d-b29f-218ea41b7d40_96.mp4" target="_blank" class="video">Video 1</a>
+  </div>
+</div>
+<div class="poi" data-media="1" data-district="alwadi">
+  <h3>باسكن روبنز</h3>
+  <div class="meta">life_convenience | open | Media: 2</div>
+  <div class="media-grid">
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756082/alwadi_media/IMG_7532_97.heic" target="_blank">Photo 1</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756084/alwadi_media/IMG_7533_98.heic" target="_blank">Photo 2</a>
+  </div>
+</div>
+<div class="poi" data-media="1" data-district="alwadi">
+  <h3>برجر ماب</h3>
+  <div class="meta">life_convenience | open | Media: 1</div>
+  <div class="media-grid">
+    <a href="https://res.cloudinary.com/dn3bxmi9r/video/upload/v1771756100/alwadi_media/IMG_8099_105.mov" target="_blank" class="video">Video 1</a>
+  </div>
+</div>
+<div class="poi" data-media="1" data-district="alwadi">
+  <h3>برجر ماب</h3>
+  <div class="meta">life_convenience | open | Media: 1</div>
+  <div class="media-grid">
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756102/alwadi_media/IMG_7521_106.heic" target="_blank">Photo 1</a>
+  </div>
+</div>
+<div class="poi" data-media="1" data-district="alwadi">
+  <h3>بقين للسباكة و الكهرباء</h3>
+  <div class="meta">life_convenience | open | Media: 2</div>
+  <div class="media-grid">
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756113/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A2%D9%A0%D9%A3%D9%A5%D9%A1%D9%A2_113.jpg" target="_blank">Photo 1</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756115/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A2%D9%A0%D9%A3%D9%A5%D9%A3%D9%A5_114.jpg" target="_blank">Photo 2</a>
+  </div>
+</div>
+<div class="poi" data-media="1" data-district="alwadi">
+  <h3>بوفية منى سالم لتقديم الوجبات</h3>
+  <div class="meta">life_convenience | open | Media: 3</div>
+  <div class="media-grid">
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756124/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A9%D9%A5%D9%A5%D9%A0%D9%A1_119.jpg" target="_blank">Photo 1</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756125/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A9%D9%A5%D9%A5%D9%A5%D9%A2_120.jpg" target="_blank">Photo 2</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/video/upload/v1771756128/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A9%D9%A5%D9%A5%D9%A5%D9%A7_121.mp4" target="_blank" class="video">Video 1</a>
+  </div>
+</div>
+<div class="poi" data-media="1" data-district="alwadi">
+  <h3>بوفية وادي الغدير</h3>
+  <div class="meta">life_convenience | open | Media: 3</div>
+  <div class="media-grid">
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756132/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A9%D9%A1%D9%A5%D9%A3%D9%A4_122.jpg" target="_blank">Photo 1</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/video/upload/v1771756135/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A9%D9%A1%D9%A8%D9%A5%D9%A8_123.mp4" target="_blank" class="video">Video 1</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756138/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A9%D9%A1%D9%A9%D9%A2%D9%A8_124.jpg" target="_blank">Photo 2</a>
+  </div>
+</div>
+<div class="poi" data-media="1" data-district="alwadi">
+  <h3>تريند سالده</h3>
+  <div class="meta">life_convenience | open | Media: 3</div>
+  <div class="media-grid">
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756171/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A9%D9%A4%D9%A2%D9%A3%D9%A5_141.jpg" target="_blank">Photo 1</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756173/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A9%D9%A4%D9%A2%D9%A5%D9%A9_142.jpg" target="_blank">Photo 2</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/video/upload/v1771756176/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A9%D9%A4%D9%A3%D9%A0%D9%A4_143.mp4" target="_blank" class="video">Video 1</a>
+  </div>
+</div>
+<div class="poi" data-media="1" data-district="alwadi">
+  <h3>تطبيق قروق</h3>
+  <div class="meta">life_convenience | open | Media: 2</div>
+  <div class="media-grid">
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756186/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A9%D9%A2%D9%A3%D9%A3%D9%A3_148.jpg" target="_blank">Photo 1</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756188/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A9%D9%A2%D9%A4%D9%A0%D9%A1_149.jpg" target="_blank">Photo 2</a>
+  </div>
+</div>
+<div class="poi" data-media="1" data-district="alwadi">
+  <h3>تموينات المقصد</h3>
+  <div class="meta">life_convenience | open | Media: 3</div>
+  <div class="media-grid">
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756196/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A9%D9%A1%D9%A2%D9%A0%D9%A8_152.jpg" target="_blank">Photo 1</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756198/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A9%D9%A1%D9%A2%D9%A1%D9%A9_153.jpg" target="_blank">Photo 2</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/video/upload/v1771756202/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A9%D9%A1%D9%A2%D9%A2%D9%A6_154.mp4" target="_blank" class="video">Video 1</a>
+  </div>
+</div>
+<div class="poi" data-media="1" data-district="alwadi">
+  <h3>تموينات سنبلة الامجاد</h3>
+  <div class="meta">life_convenience | open | Media: 3</div>
+  <div class="media-grid">
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756217/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A9%D9%A0%D9%A6%D9%A2%D9%A9_161.jpg" target="_blank">Photo 1</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/video/upload/v1771756220/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A9%D9%A0%D9%A6%D9%A3%D9%A4_162.mp4" target="_blank" class="video">Video 1</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756222/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A9%D9%A0%D9%A6%D9%A5%D9%A4_163.jpg" target="_blank">Photo 2</a>
+  </div>
+</div>
+<div class="poi" data-media="1" data-district="alwadi">
+  <h3>تموينات وسام الخالدية</h3>
+  <div class="meta">life_convenience | open | Media: 3</div>
+  <div class="media-grid">
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756230/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A9%D9%A3%D9%A3%D9%A0%D9%A2_167.jpg" target="_blank">Photo 1</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756231/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A9%D9%A3%D9%A3%D9%A1%D9%A7_168.jpg" target="_blank">Photo 2</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/video/upload/v1771756234/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A9%D9%A3%D9%A3%D9%A2%D9%A6_169.mp4" target="_blank" class="video">Video 1</a>
+  </div>
+</div>
+<div class="poi" data-media="1" data-district="alwadi">
+  <h3>حصه النفيعي للديكور الخشبي</h3>
+  <div class="meta">life_convenience | open | Media: 1</div>
+  <div class="media-grid">
+    <a href="https://res.cloudinary.com/dn3bxmi9r/video/upload/v1771756245/alwadi_media/b01b7157-f61e-4fc9-ac7b-1078bdb95e02_174.mp4" target="_blank" class="video">Video 1</a>
+  </div>
+</div>
+<div class="poi" data-media="1" data-district="alwadi">
+  <h3>دانكن</h3>
+  <div class="meta">life_convenience | open | Media: 1</div>
+  <div class="media-grid">
+    <a href="https://res.cloudinary.com/dn3bxmi9r/video/upload/v1771756270/alwadi_media/8997b6ca-9008-4ec2-9a94-0d795cd05425_187.mp4" target="_blank" class="video">Video 1</a>
+  </div>
+</div>
+<div class="poi" data-media="1" data-district="alwadi">
+  <h3>دانكن</h3>
+  <div class="meta">life_convenience | open | Media: 2</div>
+  <div class="media-grid">
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756272/alwadi_media/IMG_7537_188.heic" target="_blank">Photo 1</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756273/alwadi_media/IMG_7538_189.heic" target="_blank">Photo 2</a>
+  </div>
+</div>
+<div class="poi" data-media="1" data-district="alwadi">
+  <h3>دانكن</h3>
+  <div class="meta">life_convenience | open | Media: 4</div>
+  <div class="media-grid">
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756275/alwadi_media/IMG_7641_190.heic" target="_blank">Photo 1</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756276/alwadi_media/IMG_7642_191.heic" target="_blank">Photo 2</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756278/alwadi_media/IMG_7643_192.heic" target="_blank">Photo 3</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756280/alwadi_media/IMG_7644_193.heic" target="_blank">Photo 4</a>
+  </div>
+</div>
+<div class="poi" data-media="1" data-district="alwadi">
+  <h3>ركن الفارس للخياطة الرجالية</h3>
+  <div class="meta">life_convenience | open | Media: 4</div>
+  <div class="media-grid">
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756303/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A2%D9%A0%D9%A4%D9%A3%D9%A3%D9%A6_205.jpg" target="_blank">Photo 1</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756304/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A2%D9%A0%D9%A4%D9%A5%D9%A1%D9%A1_206.jpg" target="_blank">Photo 2</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/video/upload/v1771756307/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A2%D9%A0%D9%A4%D9%A5%D9%A1%D9%A7_207.mp4" target="_blank" class="video">Video 1</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756309/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A2%D9%A0%D9%A4%D9%A5%D9%A4%D9%A8_208.jpg" target="_blank">Photo 3</a>
+  </div>
+</div>
+<div class="poi" data-media="1" data-district="alwadi">
+  <h3>زبدية</h3>
+  <div class="meta">life_convenience | open | Media: 1</div>
+  <div class="media-grid">
+    <a href="https://res.cloudinary.com/dn3bxmi9r/video/upload/v1771756330/alwadi_media/IMG_8109_219.mov" target="_blank" class="video">Video 1</a>
+  </div>
+</div>
+<div class="poi" data-media="1" data-district="alwadi">
+  <h3>زبدية</h3>
+  <div class="meta">life_convenience | open | Media: 1</div>
+  <div class="media-grid">
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756332/alwadi_media/IMG_7558_220.heic" target="_blank">Photo 1</a>
+  </div>
+</div>
+<div class="poi" data-media="1" data-district="alwadi">
+  <h3>سحر الصورة للتصوير</h3>
+  <div class="meta">life_convenience | open | Media: 4</div>
+  <div class="media-grid">
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756351/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A8%D9%A5%D9%A5%D9%A0%D9%A3_228.jpg" target="_blank">Photo 1</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756353/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A8%D9%A5%D9%A5%D9%A0%D9%A6_229.jpg" target="_blank">Photo 2</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/video/upload/v1771756356/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A8%D9%A5%D9%A5%D9%A4%D9%A4_230.mp4" target="_blank" class="video">Video 1</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756359/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A8%D9%A5%D9%A6%D9%A1%D9%A2_231.jpg" target="_blank">Photo 3</a>
+  </div>
+</div>
+<div class="poi" data-media="1" data-district="alwadi">
+  <h3>سعد القحطاني للسباكة و الكهرباء</h3>
+  <div class="meta">life_convenience | open | Media: 3</div>
+  <div class="media-grid">
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756362/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A9%D9%A5%D9%A3%D9%A3%D9%A2_233.jpg" target="_blank">Photo 1</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756364/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A9%D9%A5%D9%A4%D9%A2%D9%A1_234.jpg" target="_blank">Photo 2</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/video/upload/v1771756368/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A9%D9%A5%D9%A4%D9%A2%D9%A8_235.mp4" target="_blank" class="video">Video 1</a>
+  </div>
+</div>
+<div class="poi" data-media="1" data-district="alwadi">
+  <h3>شاي ترسال</h3>
+  <div class="meta">life_convenience | open | Media: 5</div>
+  <div class="media-grid">
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756389/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A9%D9%A3%D9%A9%D9%A4%D9%A8_247.jpg" target="_blank">Photo 1</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756390/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A9%D9%A4%D9%A1%D9%A0%D9%A7_248.jpg" target="_blank">Photo 2</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/video/upload/v1771756394/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A9%D9%A4%D9%A1%D9%A1%D9%A1_249.mp4" target="_blank" class="video">Video 1</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756398/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A9%D9%A4%D9%A1%D9%A3%D9%A1_250.jpg" target="_blank">Photo 3</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756400/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A9%D9%A4%D9%A1%D9%A5%D9%A2_251.jpg" target="_blank">Photo 4</a>
+  </div>
+</div>
+<div class="poi" data-media="1" data-district="alwadi">
+  <h3>صراف آلي بنك البلاد</h3>
+  <div class="meta">life_convenience | open | Media: 3</div>
+  <div class="media-grid">
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756410/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A9%D9%A0%D9%A5%D9%A4%D9%A2_257.jpg" target="_blank">Photo 1</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756411/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A9%D9%A0%D9%A5%D9%A5%D9%A5_258.jpg" target="_blank">Photo 2</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/video/upload/v1771756414/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A9%D9%A0%D9%A6%D9%A0%D9%A1_259.mp4" target="_blank" class="video">Video 1</a>
+  </div>
+</div>
+<div class="poi" data-media="1" data-district="alwadi">
+  <h3>صراف آلي بنك البلاد</h3>
+  <div class="meta">life_convenience | open | Media: 1</div>
+  <div class="media-grid">
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756417/alwadi_media/IMG_7776_260.heic" target="_blank">Photo 1</a>
+  </div>
+</div>
+<div class="poi" data-media="1" data-district="alwadi">
+  <h3>صيدلية زهرة الروضة</h3>
+  <div class="meta">life_convenience | open | Media: 3</div>
+  <div class="media-grid">
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756429/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A9%D9%A0%D9%A0%D9%A0%D9%A5_267.jpg" target="_blank">Photo 1</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/video/upload/v1771756432/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A9%D9%A0%D9%A1%D9%A0%D9%A9_268.mp4" target="_blank" class="video">Video 1</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756434/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A2%D9%A0%D9%A4%D9%A2%D9%A3%D9%A8_269.jpg" target="_blank">Photo 2</a>
+  </div>
+</div>
+<div class="poi" data-media="1" data-district="alwadi">
+  <h3>صيدلية وروف الصحة</h3>
+  <div class="meta">life_convenience | open | Media: 4</div>
+  <div class="media-grid">
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756448/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A9%D9%A2%D9%A5%D9%A1%D9%A2_275.jpg" target="_blank">Photo 1</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756450/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A9%D9%A2%D9%A6%D9%A5%D9%A5_276.jpg" target="_blank">Photo 2</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756452/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A9%D9%A2%D9%A6%D9%A5%D9%A8_277.jpg" target="_blank">Photo 3</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/video/upload/v1771756455/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A9%D9%A2%D9%A7%D9%A0%D9%A3_278.mp4" target="_blank" class="video">Video 1</a>
+  </div>
+</div>
+<div class="poi" data-media="1" data-district="alwadi">
+  <h3>عبدالله الشمري لتأجير المعدات</h3>
+  <div class="meta">life_convenience | open | Media: 3</div>
+  <div class="media-grid">
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756461/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A8%D9%A5%D9%A1%D9%A4%D9%A7_281.jpg" target="_blank">Photo 1</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756463/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A8%D9%A5%D9%A2%D9%A0%D9%A2_282.jpg" target="_blank">Photo 2</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/video/upload/v1771756466/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A8%D9%A5%D9%A2%D9%A2%D9%A4_283.mp4" target="_blank" class="video">Video 1</a>
+  </div>
+</div>
+<div class="poi" data-media="1" data-district="alwadi">
+  <h3>علي القريني لتأجير المعدات</h3>
+  <div class="meta">life_convenience | open | Media: 2</div>
+  <div class="media-grid">
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756480/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A2%D9%A0%D9%A2%D9%A9%D9%A3%D9%A6_291.jpg" target="_blank">Photo 1</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756482/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A2%D9%A0%D9%A3%D9%A0%D9%A2%D9%A3_292.jpg" target="_blank">Photo 2</a>
+  </div>
+</div>
+<div class="poi" data-media="1" data-district="alwadi">
+  <h3>علي القريني لتأجير المعدات (1)</h3>
+  <div class="meta">life_convenience | open | Media: 2</div>
+  <div class="media-grid">
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756483/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A2%D9%A0%D9%A3%D9%A0%D9%A0%D9%A9_293.jpg" target="_blank">Photo 1</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756485/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A2%D9%A0%D9%A3%D9%A0%D9%A2%D9%A3_294.jpg" target="_blank">Photo 2</a>
+  </div>
+</div>
+<div class="poi" data-media="1" data-district="alwadi">
+  <h3>علي عبدالله للسباكة و الكهرباء</h3>
+  <div class="meta">life_convenience | open | Media: 3</div>
+  <div class="media-grid">
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756487/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A2%D9%A0%D9%A3%D9%A3%D9%A2%D9%A6_295.jpg" target="_blank">Photo 1</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756489/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A2%D9%A0%D9%A3%D9%A4%D9%A1%D9%A7_296.jpg" target="_blank">Photo 2</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/video/upload/v1771756492/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A2%D9%A0%D9%A3%D9%A4%D9%A2%D9%A2_297.mp4" target="_blank" class="video">Video 1</a>
+  </div>
+</div>
+<div class="poi" data-media="1" data-district="alwadi">
+  <h3>غدق البساتين للخضار و الفواكه و التمور</h3>
+  <div class="meta">life_convenience | open | Media: 3</div>
+  <div class="media-grid">
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756498/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A9%D9%A3%D9%A7%D9%A1%D9%A8_300.jpg" target="_blank">Photo 1</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756499/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A9%D9%A3%D9%A9%D9%A2%D9%A3_301.jpg" target="_blank">Photo 2</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/video/upload/v1771756502/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A9%D9%A3%D9%A9%D9%A2%D9%A8_302.mp4" target="_blank" class="video">Video 1</a>
+  </div>
+</div>
+<div class="poi" data-media="0" data-district="alwadi">
+  <h3>فديو</h3>
+  <div class="meta">life_convenience | open | Media: 0</div>
+  <div class="media-grid">
+  </div>
+</div>
+<div class="poi" data-media="1" data-district="alwadi">
+  <h3>فوال اطياف الطائف</h3>
+  <div class="meta">life_convenience | open | Media: 2</div>
+  <div class="media-grid">
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756517/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A2%D9%A0%D9%A3%D9%A6%D9%A3%D9%A6_310.jpg" target="_blank">Photo 1</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756518/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A2%D9%A0%D9%A3%D9%A9%D9%A2%D9%A5_311.jpg" target="_blank">Photo 2</a>
+  </div>
+</div>
+<div class="poi" data-media="1" data-district="alwadi">
+  <h3>قرية العصافير</h3>
+  <div class="meta">life_convenience | open | Media: 1</div>
+  <div class="media-grid">
+    <a href="https://res.cloudinary.com/dn3bxmi9r/video/upload/v1771756523/alwadi_media/IMG_8098_314.mov" target="_blank" class="video">Video 1</a>
+  </div>
+</div>
+<div class="poi" data-media="1" data-district="alwadi">
+  <h3>قرية العصافير</h3>
+  <div class="meta">life_convenience | open | Media: 2</div>
+  <div class="media-grid">
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756526/alwadi_media/IMG_7500_315.heic" target="_blank">Photo 1</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756527/alwadi_media/IMG_7501_316.heic" target="_blank">Photo 2</a>
+  </div>
+</div>
+<div class="poi" data-media="1" data-district="alwadi">
+  <h3>مجمع عيادات وروف الطبي</h3>
+  <div class="meta">life_convenience | open | Media: 4</div>
+  <div class="media-grid">
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756601/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A9%D9%A1%D9%A0%D9%A4%D9%A8_353.jpg" target="_blank">Photo 1</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756603/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A9%D9%A1%D9%A0%D9%A5%D9%A1_354.jpg" target="_blank">Photo 2</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/video/upload/v1771756607/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A9%D9%A1%D9%A0%D9%A5%D9%A7_355.mp4" target="_blank" class="video">Video 1</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756609/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A9%D9%A1%D9%A1%D9%A3%D9%A7_356.jpg" target="_blank">Photo 3</a>
+  </div>
+</div>
+<div class="poi" data-media="1" data-district="alwadi">
+  <h3>مخبز تميس</h3>
+  <div class="meta">life_convenience | open | Media: 2</div>
+  <div class="media-grid">
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756634/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A2%D9%A0%D9%A2%D9%A0%D9%A2%D9%A3_368.jpg" target="_blank">Photo 1</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756636/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A2%D9%A0%D9%A2%D9%A0%D9%A3%D9%A7_369.jpg" target="_blank">Photo 2</a>
+  </div>
+</div>
+<div class="poi" data-media="1" data-district="alwadi">
+  <h3>مخبز تميس واحد تميز</h3>
+  <div class="meta">life_convenience | open | Media: 3</div>
+  <div class="media-grid">
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756637/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A9%D9%A2%D9%A8%D9%A1%D9%A5_370.jpg" target="_blank">Photo 1</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756639/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A9%D9%A2%D9%A8%D9%A2%D9%A8_371.jpg" target="_blank">Photo 2</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/video/upload/v1771756642/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A9%D9%A2%D9%A8%D9%A3%D9%A6_372.mp4" target="_blank" class="video">Video 1</a>
+  </div>
+</div>
+<div class="poi" data-media="1" data-district="alwadi">
+  <h3>مخبوزات الواحة الدولية</h3>
+  <div class="meta">life_convenience | open | Media: 3</div>
+  <div class="media-grid">
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756644/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A9%D9%A3%D9%A4%D9%A4%D9%A3_373.jpg" target="_blank">Photo 1</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756646/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A9%D9%A3%D9%A6%D9%A3%D9%A3_374.jpg" target="_blank">Photo 2</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/video/upload/v1771756651/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A9%D9%A3%D9%A6%D9%A5%D9%A1_375.mp4" target="_blank" class="video">Video 1</a>
+  </div>
+</div>
+<div class="poi" data-media="1" data-district="alwadi">
+  <h3>مداد المعارف لصيانة الكمبيوتر</h3>
+  <div class="meta">life_convenience | open | Media: 3</div>
+  <div class="media-grid">
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756653/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A9%D9%A2%D9%A0%D9%A3%D9%A7_376.jpg" target="_blank">Photo 1</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756655/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A9%D9%A2%D9%A0%D9%A5%D9%A0_377.jpg" target="_blank">Photo 2</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/video/upload/v1771756658/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A9%D9%A2%D9%A0%D9%A5%D9%A5_378.mp4" target="_blank" class="video">Video 1</a>
+  </div>
+</div>
+<div class="poi" data-media="1" data-district="alwadi">
+  <h3>مداد المعارف للصيانة</h3>
+  <div class="meta">life_convenience | open | Media: 3</div>
+  <div class="media-grid">
+    <a href="https://res.cloudinary.com/dn3bxmi9r/video/upload/v1771756662/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A9%D9%A2%D9%A2%D9%A5%D9%A2_379.mp4" target="_blank" class="video">Video 1</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756665/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A9%D9%A2%D9%A3%D9%A0%D9%A4_380.jpg" target="_blank">Photo 1</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756667/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A9%D9%A2%D9%A3%D9%A1%D9%A5_381.jpg" target="_blank">Photo 2</a>
+  </div>
+</div>
+<div class="poi" data-media="1" data-district="alwadi">
+  <h3>مطاعم بهارات الشواية البخاري</h3>
+  <div class="meta">life_convenience | open | Media: 3</div>
+  <div class="media-grid">
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756696/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A9%D9%A0%D9%A2%D9%A5%D9%A0_395.jpg" target="_blank">Photo 1</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756698/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A9%D9%A0%D9%A3%D9%A1%D9%A3_396.jpg" target="_blank">Photo 2</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/video/upload/v1771756700/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A9%D9%A0%D9%A3%D9%A2%D9%A2%7E2_397.mp4" target="_blank" class="video">Video 1</a>
+  </div>
+</div>
+<div class="poi" data-media="1" data-district="alwadi">
+  <h3>مطاعم دار الخليج العربي البخاري</h3>
+  <div class="meta">life_convenience | open | Media: 1</div>
+  <div class="media-grid">
+    <a href="https://res.cloudinary.com/dn3bxmi9r/video/upload/v1771756702/alwadi_media/6f3de277-9d42-439f-98b7-942ab404e397_398.mp4" target="_blank" class="video">Video 1</a>
+  </div>
+</div>
+<div class="poi" data-media="1" data-district="alwadi">
+  <h3>مغاسل الرهدن</h3>
+  <div class="meta">life_convenience | open | Media: 3</div>
+  <div class="media-grid">
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756713/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A9%D9%A3%D9%A1%D9%A1%D9%A4_403.jpg" target="_blank">Photo 1</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756715/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A9%D9%A3%D9%A1%D9%A3%D9%A3_404.jpg" target="_blank">Photo 2</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/video/upload/v1771756718/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A9%D9%A3%D9%A2%D9%A3%D9%A1_405.mp4" target="_blank" class="video">Video 1</a>
+  </div>
+</div>
+<div class="poi" data-media="1" data-district="alwadi">
+  <h3>مغاسل الضيف</h3>
+  <div class="meta">life_convenience | open | Media: 1</div>
+  <div class="media-grid">
+    <a href="https://res.cloudinary.com/dn3bxmi9r/video/upload/v1771756721/alwadi_media/80b74ea6-f126-4eae-8f97-7b5e974a568f_406.mp4" target="_blank" class="video">Video 1</a>
+  </div>
+</div>
+<div class="poi" data-media="1" data-district="alwadi">
+  <h3>مغاسل بسمة امل</h3>
+  <div class="meta">life_convenience | open | Media: 3</div>
+  <div class="media-grid">
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756723/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A2%D9%A0%D9%A2%D9%A4%D9%A1%D9%A7_407.jpg" target="_blank">Photo 1</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756725/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A2%D9%A0%D9%A2%D9%A7%D9%A1%D9%A8_408.jpg" target="_blank">Photo 2</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756727/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A2%D9%A0%D9%A2%D9%A7%D9%A4%D9%A1_409.jpg" target="_blank">Photo 3</a>
+  </div>
+</div>
+<div class="poi" data-media="1" data-district="alwadi">
+  <h3>مغسلة الجبر</h3>
+  <div class="meta">life_convenience | open | Media: 3</div>
+  <div class="media-grid">
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756733/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A2%D9%A0%D9%A2%D9%A1%D9%A1%D9%A7_413.jpg" target="_blank">Photo 1</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756735/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A2%D9%A0%D9%A2%D9%A1%D9%A5%D9%A8_414.jpg" target="_blank">Photo 2</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/video/upload/v1771756738/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A2%D9%A0%D9%A2%D9%A2%D9%A2%D9%A0_415.mp4" target="_blank" class="video">Video 1</a>
+  </div>
+</div>
+<div class="poi" data-media="1" data-district="alwadi">
+  <h3>ملحمة عرين دمشق</h3>
+  <div class="meta">life_convenience | open | Media: 4</div>
+  <div class="media-grid">
+    <a href="https://res.cloudinary.com/dn3bxmi9r/video/upload/v1771756760/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A8%D9%A4%D9%A6%D9%A2%D9%A5_423.mp4" target="_blank" class="video">Video 1</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756763/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A8%D9%A4%D9%A6%D9%A4%D9%A4_424.jpg" target="_blank">Photo 1</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756766/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A8%D9%A4%D9%A6%D9%A5%D9%A3_425.jpg" target="_blank">Photo 2</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756768/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A8%D9%A4%D9%A7%D9%A4%D9%A1_426.jpg" target="_blank">Photo 3</a>
+  </div>
+</div>
+<div class="poi" data-media="1" data-district="alwadi">
+  <h3>موبايلي</h3>
+  <div class="meta">life_convenience | open | Media: 1</div>
+  <div class="media-grid">
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756774/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A2%D9%A0%D9%A4%D9%A7%D9%A1%D9%A1_430.jpg" target="_blank">Photo 1</a>
+  </div>
+</div>
+<div class="poi" data-media="1" data-district="alwadi">
+  <h3>وكالة السفر وسياحة</h3>
+  <div class="meta">life_convenience | open | Media: 3</div>
+  <div class="media-grid">
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756824/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A9%D9%A4%D9%A9%D9%A3%D9%A1_456.jpg" target="_blank">Photo 1</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/video/upload/v1771756828/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A9%D9%A4%D9%A9%D9%A4%D9%A2_457.mp4" target="_blank" class="video">Video 1</a>
+    <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771756834/alwadi_media/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A2%D9%A2%D9%A1_%D9%A1%D9%A9%D9%A5%D9%A1%D9%A0%D9%A2_458.jpg" target="_blank">Photo 2</a>
+  </div>
+</div>

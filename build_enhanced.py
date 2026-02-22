@@ -418,7 +418,7 @@ template = '''<!DOCTYPE html>
     const LOCAL_TAGS_KEY = "alnafl_media_tags";
     const CUSTOM_TAGS_KEY = "alnafl_custom_tags";
 
-    const DISTRICT_LABELS = { alnafl: 'Al Nafl' };
+    const DISTRICT_LABELS = { alnafl: 'Al Nafl', alwadi: 'Al Wadi' };
     let currentPOIs = [];
     let activeFilter = 'all';
     let activeTagFilter = '';
