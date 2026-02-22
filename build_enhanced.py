@@ -97,6 +97,24 @@ template = '''<!DOCTYPE html>
             flex-shrink: 0;
         }
         .sidebar-header h2 { font-size: 1.25rem; margin: 0; font-weight: 700; color: var(--brand-primary); }
+        .district-select {
+            width: 100%;
+            margin-top: 0.75rem;
+            padding: 0.6rem 1rem;
+            border-radius: 0.5rem;
+            border: 1px solid var(--border-color);
+            background: #0f172a;
+            color: white;
+            font-family: inherit;
+            font-size: 0.85rem;
+            cursor: pointer;
+            appearance: none;
+            -webkit-appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%2394a3b8' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L3 6h10z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 0.75rem center;
+        }
+        .district-select:focus { outline: none; border-color: var(--brand-primary); }
         .stats-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -309,7 +327,9 @@ template = '''<!DOCTYPE html>
 
     <aside>
         <div class="sidebar-header">
-            <h2>Al Nafl Media</h2>
+            <h2>Media Discovery</h2>
+            <select id="district-select" class="district-select" onchange="setDistrictFilter(this.value)">
+            </select>
         </div>
 
         <div class="stats-grid">
@@ -398,10 +418,12 @@ template = '''<!DOCTYPE html>
     const LOCAL_TAGS_KEY = "alnafl_media_tags";
     const CUSTOM_TAGS_KEY = "alnafl_custom_tags";
 
+    const DISTRICT_LABELS = { alnafl: 'Al Nafl' };
     let currentPOIs = [];
     let activeFilter = 'all';
     let activeTagFilter = '';
     let activeMediaTypeFilter = '';
+    let activeDistrictFilter = '';
     let searchQuery = '';
 
     let lbCurrentPOI = null;
@@ -442,10 +464,11 @@ template = '''<!DOCTYPE html>
             }));
 
             const hasMedia = p.dataset.media === "1";
+            const district = p.dataset.district || '';
             const category = meta.split('|')[0].trim() || '-';
             const status = meta.toLowerCase().includes('open') ? 'Open' : 'Closed';
 
-            return { id: idx, title, category, status, hasMedia, mediaLinks };
+            return { id: idx, title, category, status, hasMedia, district, mediaLinks };
         });
     }
 
@@ -480,6 +503,7 @@ template = '''<!DOCTYPE html>
         const userTags = JSON.parse(localStorage.getItem(LOCAL_TAGS_KEY) || '{}');
 
         const filtered = currentPOIs.filter(p => {
+            const matchesDistrict = !activeDistrictFilter || p.district === activeDistrictFilter;
             const matchesSearch = !searchQuery || p.title.toLowerCase().includes(searchQuery.toLowerCase()) || p.category.toLowerCase().includes(searchQuery.toLowerCase());
             const matchesGlobal = (activeFilter === 'all') || (activeFilter === 'media' && p.hasMedia) || (activeFilter === 'no-media' && !p.hasMedia);
 
@@ -505,7 +529,7 @@ template = '''<!DOCTYPE html>
                 }
             }
 
-            return matchesSearch && matchesGlobal && matchesTag && matchesMediaType;
+            return matchesDistrict && matchesSearch && matchesGlobal && matchesTag && matchesMediaType;
         });
 
         function matchesTypeFilter(href, filterType) {
@@ -569,7 +593,8 @@ template = '''<!DOCTYPE html>
         }).join('');
 
         document.getElementById('stat-pois').innerText = filtered.length;
-        document.getElementById('stat-media').innerText = currentPOIs.reduce((s,p) => s + p.mediaLinks.filter(m => !m.isPublic && m.href && m.href !== '#').length, 0);
+        const scopedPOIs = activeDistrictFilter ? currentPOIs.filter(p => p.district === activeDistrictFilter) : currentPOIs;
+        document.getElementById('stat-media').innerText = scopedPOIs.reduce((s,p) => s + p.mediaLinks.filter(m => !m.isPublic && m.href && m.href !== '#').length, 0);
 
         document.querySelectorAll('.carousel-track').forEach(tr => {
             const ind = document.getElementById(tr.id + '-ind');
@@ -581,6 +606,23 @@ template = '''<!DOCTYPE html>
     function handleSearch() {
         searchQuery = document.getElementById('search-input').value;
         renderGrid();
+    }
+
+    function setDistrictFilter(d) {
+        activeDistrictFilter = d;
+        renderGrid();
+    }
+
+    function populateDistricts() {
+        const districts = [...new Set(currentPOIs.map(p => p.district).filter(Boolean))].sort();
+        const select = document.getElementById('district-select');
+        select.innerHTML = '<option value="">All Districts</option>';
+        districts.forEach(d => {
+            const opt = document.createElement('option');
+            opt.value = d;
+            opt.textContent = DISTRICT_LABELS[d] || d;
+            select.appendChild(opt);
+        });
     }
 
     function setFilter(f) {
@@ -704,6 +746,7 @@ template = '''<!DOCTYPE html>
 
     window.onload = () => {
         currentPOIs = extractData();
+        populateDistricts();
         refreshTagFilters();
         renderGrid();
     };

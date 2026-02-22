@@ -86,6 +86,24 @@
             flex-shrink: 0;
         }
         .sidebar-header h2 { font-size: 1.25rem; margin: 0; font-weight: 700; color: var(--brand-primary); }
+        .district-select {
+            width: 100%;
+            margin-top: 0.75rem;
+            padding: 0.6rem 1rem;
+            border-radius: 0.5rem;
+            border: 1px solid var(--border-color);
+            background: #0f172a;
+            color: white;
+            font-family: inherit;
+            font-size: 0.85rem;
+            cursor: pointer;
+            appearance: none;
+            -webkit-appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%2394a3b8' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L3 6h10z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 0.75rem center;
+        }
+        .district-select:focus { outline: none; border-color: var(--brand-primary); }
         .stats-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -298,7 +316,9 @@
 
     <aside>
         <div class="sidebar-header">
-            <h2>Al Nafl Media</h2>
+            <h2>Media Discovery</h2>
+            <select id="district-select" class="district-select" onchange="setDistrictFilter(this.value)">
+            </select>
         </div>
 
         <div class="stats-grid">
@@ -377,7 +397,7 @@
     </div>
 
 <div id="poi-data" style="display:none">
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>سينومي تالا مول — Cenomi Tala Mall</h3>
   <div class="meta">Shopping | open | Media: 3</div>
   <div class="media-grid">
@@ -388,7 +408,7 @@
     <a href="https://lh3.googleusercontent.com/gps-cs-s/AHVAwep1NEO5hBjW-w89TrAzHd3rH-B-PqYkbZbdg-OTrcE5f6A7ok0PZ7oAOAbEB7n0getkMu2WxO3IeI43k-lt24XI2FSBniXtMsJrcLE2AZAmTSTZozoGTqc2UEFS2OrUuHBhCY_Obw=w408-h306-k-no" target="_blank" class="public">POI Image</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>ليمونة — Lemona</h3>
   <div class="meta">Restaurants | open | Media: 4</div>
   <div class="media-grid">
@@ -400,7 +420,7 @@
     <a href="https://lh3.googleusercontent.com/p/AF1QipPqxpJS_6nGlFuSdlkssHhsgx4yuOb66q73Q693=w533-h240-k-no" target="_blank" class="public">POI Image</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>كرسبي سويت — Krispy Sweet</h3>
   <div class="meta">Bakery | Open | Media: 5</div>
   <div class="media-grid">
@@ -413,7 +433,7 @@
     <a href="https://lh3.googleusercontent.com/gps-cs-s/AHVAwerDxphduI-EXTuxr3b9DCSPGTjsgk9J4payAw9EZqExoSOvpcRglIvuY4mHZSQPt2mJzwQZhXHTZQKWw9rmFE3KztiWKnWJtjaJNjQMYd9SY6oA6XmyYfsqyLs0Jkp-o3hObLFQjT8Dg6hj=w408-h306-k-no" target="_blank" class="public">POI Image</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>ذا ليبل — THE LABEL</h3>
   <div class="meta">Beauty and Spa | open | Media: 1</div>
   <div class="media-grid">
@@ -422,14 +442,14 @@
     <a href="https://lh3.googleusercontent.com/p/AF1QipM3zZcwReppY_54v7Cn3whBQq3ossWkK9zNCnqA=w408-h398-k-no" target="_blank" class="public">POI Image</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>العثيم — Othaim</h3>
   <div class="meta">Shopping | open | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771500840/alnafl_media/IMG_7596_13.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>زارا — ZARA</h3>
   <div class="meta">Shopping | open | Media: 2</div>
   <div class="media-grid">
@@ -439,14 +459,14 @@
     <a href="https://lh3.googleusercontent.com/gps-cs-s/AHVAwer2kSnzEkVDffiTSAGA4jdt-YXADbGNhTI6WgtC53MJMvn93iMp1v1KFkmXrRab_G9cIhw09DKyPAfXlP8Z9oY_qMWYv1dM_m0io3E-C7IcfkOhb1vDFJdRDJIEA0BaRw3E_j7a=w426-h240-k-no" target="_blank" class="public">POI Image</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>العاب الحسين — Alhussain Toys</h3>
   <div class="meta">Shopping | open | Media: 1</div>
   <div class="media-grid">
     <a href="#" title="File not found" target="_blank" class="video">Video 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>الاتحاد للتأمين التعاوني — AL ETIHAD COOPERATIVE INSURANCE</h3>
   <div class="meta">Corporate | open | Media: 1</div>
   <div class="media-grid">
@@ -455,7 +475,7 @@
     <a href="https://lh3.googleusercontent.com/gps-cs-s/AHVAweoGUllmFS1hFlh-WPU3VVCleo0mONqYq_fbTrTmYOfJp4-6Ardj9aDkHSvj-yhabqk-TB287NUap9wfCXyhvhTcilL5Get3iySN2PMBmCnlTZ81i9wmGSLpcbEpyOszUKw0sLnOs-Gu8vY2=w462-h240-k-no" target="_blank" class="public">POI Image</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>روستري — ROASTREE</h3>
   <div class="meta">Coffee Shops | open | Media: 4</div>
   <div class="media-grid">
@@ -465,7 +485,7 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771500856/alnafl_media/IMG_7862_21.heic" target="_blank">Photo 4</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>مكتبة جرير — Jarir Bookstore</h3>
   <div class="meta">Shopping | open | Media: 3</div>
   <div class="media-grid">
@@ -476,7 +496,7 @@
     <a href="https://lh3.googleusercontent.com/gps-cs-s/AHVAweoyhnMO0O91V7FQu2Kh1TO8IqL9AVcqFvdEhCs8qDZneP1SfX7EVzFpf3h5N1ZzLvmb5uwwKIAB68yXKkml1odKDwXET-9czCqnY_eCTXwxsc8FuIe26haRDIiGCxjblUa5nEz9LUffPVFc=w408-h544-k-no" target="_blank" class="public">POI Image</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>التنظيف العميق — Deep Clean</h3>
   <div class="meta">Automotive Services | open | Media: 1</div>
   <div class="media-grid">
@@ -485,7 +505,7 @@
     <a href="https://lh3.googleusercontent.com/p/AF1QipPtfzzzPpgKpBfCVC8LzEIRt_WZR4rEYu5mJYfL=w426-h240-k-no" target="_blank" class="public">POI Image</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>مغسلة روش لغسيل السيارات — Al Rwsh Lghsyl Alsyarat Laundry</h3>
   <div class="meta">Automotive Services | open | Media: 2</div>
   <div class="media-grid">
@@ -495,7 +515,7 @@
     <a href="https://lh3.googleusercontent.com/p/AF1QipPDpc3KdeOH0ukmdKBa4ejubZVqLvOYmkrSJ80f=w426-h240-k-no" target="_blank" class="public">POI Image</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>بنك الجزيرة — BANK ALJAZIRA</h3>
   <div class="meta">Banks | open | Media: 3</div>
   <div class="media-grid">
@@ -506,7 +526,7 @@
     <a href="https://lh3.googleusercontent.com/gps-cs-s/AHVAweqtpDGKTdt3P5FfAmMzqM3xcf2Fha_Ry9Y7mdU-VKBaoikf9o1uCO03qiRbbe4DvAU9VaB2SgA_iaeUuuH0gaLZcHpci8tUzHWVWccIt8THuqUxx7XXeoaiFTLfrSCwXr79OkIunKnujHD6=w408-h266-k-no" target="_blank" class="public">POI Image</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>طلائع الشبكة — Al Tlaa Alshbkh</h3>
   <div class="meta">Shopping | open | Media: 2</div>
   <div class="media-grid">
@@ -516,7 +536,7 @@
     <a href="https://lh3.googleusercontent.com/gps-cs-s/AHVAweoddOwcoJn1DUd3I_T-1cbSyNry3iZ1HNEzU3Hb7KTYozMoaQo58QLu8Fy_3YRJ4weUNLI24CwP1vjaHjTAkJPbEGzfIsyn0y2dQcCbIevTDnOGTZn4cWxABu3dq-NwidYhqdrh=w408-h306-k-no" target="_blank" class="public">POI Image</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>ستاربكس — Al Starbks</h3>
   <div class="meta">Coffee Shops | open | Media: 2</div>
   <div class="media-grid">
@@ -524,7 +544,7 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771500877/alnafl_media/IMG_7763_34.heic" target="_blank">Photo 2</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>التحليق الرياضية — Flite Freerun</h3>
   <div class="meta">Sports | open | Media: 2</div>
   <div class="media-grid">
@@ -534,7 +554,7 @@
     <a href="https://lh3.googleusercontent.com/p/AF1QipNHVjFbzMp0aQS8IWUwjj0eajH94gx9a0-K57B7=w408-h408-k-no" target="_blank" class="public">POI Image</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>ألدو — ALDO</h3>
   <div class="meta">Shopping | open | Media: 1</div>
   <div class="media-grid">
@@ -543,7 +563,7 @@
     <a href="https://lh3.googleusercontent.com/gps-cs-s/AHVAwerEvic5vxLLdrtrNxxWNPCLl3YzOpc1mEdnEUXJ7-H_l1gZbbKz1Kp-2WrJcVP3E6L5ZA53qikmciHaKiEIGX_qmSSTjjCAacjolnBagjXU1mL71NhYfzaZpsESidno3AvwEJzSU6nJd2c=w408-h544-k-no" target="_blank" class="public">POI Image</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>فايف سيزون للنظارات — Al Fayf Syzwn Llnzarat</h3>
   <div class="meta">Hospitals | open | Media: 1</div>
   <div class="media-grid">
@@ -552,7 +572,7 @@
     <a href="https://lh3.googleusercontent.com/gps-cs-s/AHVAweq01i5W-lC273bj4RLDyrUPck0Cz8YlFSoplb-kYjFOM-X10SS0ZQx6xvj1IWLUd1lsD3RfAoBgq-f2pihbm3nJ0Uo9FUshbg3oDF8AZ3rIVJ0BxX_8jzjV7MRSkkfKPCLHF867=w408-h544-k-no" target="_blank" class="public">POI Image</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>بيـتيت لاش — Petite lash</h3>
   <div class="meta">Beauty and Spa | open | Media: 2</div>
   <div class="media-grid">
@@ -562,14 +582,14 @@
     <a href="https://lh3.googleusercontent.com/p/AF1QipOCcdU5ftQ29FXMk6WJFtiHItpbNjZyWVNEOt6F=w408-h544-k-no" target="_blank" class="public">POI Image</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>زهور الريف — Zohoor Alreef</h3>
   <div class="meta">Shopping | open | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771500890/alnafl_media/IMG_7661_41.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>كيدي كير — KIDDY CARE</h3>
   <div class="meta">Beauty and Spa | open | Media: 2</div>
   <div class="media-grid">
@@ -579,7 +599,7 @@
     <a href="https://lh3.googleusercontent.com/gps-cs-s/AHVAweorB1IwB6is7fGXksg1TZ7drOQFCjPf_qOuDhsoCQ--pn28LKzPianCwcTv_9pYZeFSAYl-N4_wUcKskjpfPYZMnJD_KZ1tAI5QJEeOjTqRG30EFmq0IA_T2jsaV81OLTR9NTAY3M8zwJk=w408-h544-k-no" target="_blank" class="public">POI Image</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>لابوتيه — La Beaute</h3>
   <div class="meta">Shopping | open | Media: 1</div>
   <div class="media-grid">
@@ -588,7 +608,7 @@
     <a href="https://lh3.googleusercontent.com/p/AF1QipNZXYaGpTdj4spNkRg6RcKSQZLtdS3gY-eRBKRb=w408-h298-k-no" target="_blank" class="public">POI Image</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>هرفي — Al Hrfy</h3>
   <div class="meta">Restaurants | open | Media: 1</div>
   <div class="media-grid">
@@ -597,7 +617,7 @@
     <a href="https://lh3.googleusercontent.com/gps-cs-s/AHVAwerXRONCgNKDmqQvgcHnfc62njGk_jB7fyPYguotSmUwl9hwtHIFJhpJhxvWaGkenxjmaKd6RcdMqBaQXsezlu4acjh7OgyKX70tFMgfCaMl4uP2NkJrie1YqIQA1xmHFi8R5S5e=w408-h725-k-no" target="_blank" class="public">POI Image</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>العربية للعود — Arabian Oud</h3>
   <div class="meta">Shopping | open | Media: 3</div>
   <div class="media-grid">
@@ -608,7 +628,7 @@
     <a href="https://lh3.googleusercontent.com/gps-cs-s/AHVAwep62qkfOpFfAC3dqHY6lOVEt7GEN3E4t5Oks65ldNVtjnRuTwPRvBOwu0dnhxkTQLheJGFVTDdqoOCPsxjCfwMwQpopdhPFAzhxE0UgV5C-mxkROE_Et3pV5zgJQ6PhCS9wmR-sLxMyHou2=w408-h306-k-no" target="_blank" class="public">POI Image</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>شاورما كنج — Shawarma King</h3>
   <div class="meta">Restaurants | open | Media: 1</div>
   <div class="media-grid">
@@ -617,14 +637,14 @@
     <a href="https://lh3.googleusercontent.com/p/AF1QipN7L6T81We4TU-ZsNmC6xpzXcxlFiOeTdT-vOI4=w408-h272-k-no" target="_blank" class="public">POI Image</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>ستراديفاريوس — Stradivarius</h3>
   <div class="meta">Shopping | open | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771500914/alnafl_media/IMG_7783_50.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>شأس لخدمات المياه — SHA'S for water services</h3>
   <div class="meta">Corporate | open | Media: 1</div>
   <div class="media-grid">
@@ -633,7 +653,7 @@
     <a href="https://lh3.googleusercontent.com/gps-cs-s/AHVAweoWbD6gnPgzR2sDybPYdMN9CWFY9MEgfSVUqHlAzDZK7JG4tZGLwxfQmK2W8OAsRZiLJyUYdfGBpWgErBuOobz1ZlW9yS4ocMXjNWJJV4IhaPQt90FMfJZoLoWOSOgCJs6rePOp=w426-h240-k-no" target="_blank" class="public">POI Image</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>يو كوفي — U COFFEE</h3>
   <div class="meta">Coffee Shops | open | Media: 2</div>
   <div class="media-grid">
@@ -643,7 +663,7 @@
     <a href="https://lh3.googleusercontent.com/gps-cs-s/AHVAwerYZQgYjWeaAZeMX7TMZttTfvYEyzeoJSVHlTD2uZLKoX1fL2uDtUKlaswRFMrYFvxWJSj8kw1oHK4kbtlBWpTCAU2eYNmlbARsGBV27Ba3nnnp_50Az-AapAXgGSJjsIgQc2ZWiPxdZU7y=w408-h388-k-no" target="_blank" class="public">POI Image</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>أنواع القهوة — Al Anwaa Alqhwh</h3>
   <div class="meta">Coffee Shops | open | Media: 1</div>
   <div class="media-grid">
@@ -652,7 +672,7 @@
     <a href="https://lh3.googleusercontent.com/p/AF1QipMjQRKbhKmZIwsombQTum-TdNkFuH2Od8zJr1s1=w408-h306-k-no" target="_blank" class="public">POI Image</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>ذي بودي شوب — THE BODY SHOP</h3>
   <div class="meta">Shopping | open | Media: 1</div>
   <div class="media-grid">
@@ -661,7 +681,7 @@
     <a href="https://lh3.googleusercontent.com/gps-cs-s/AHVAweperU4xwB8ICJepqs9pp8_6UTH12zFjY_DVPBISWSPJ-aAh3iEj9cyaOUL2Qn7iU0BpWURVmFQ45zlwLB-hrCXetqNyPFdk7TgoJyzG2SEWsd0sTmW8o58BZQZphcWxPhWZ7yE0pqKoGwbq=w408-h725-k-no" target="_blank" class="public">POI Image</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>عيادات نايل — Nayel Clinics</h3>
   <div class="meta">Hospitals | open | Media: 1</div>
   <div class="media-grid">
@@ -670,7 +690,7 @@
     <a href="https://lh3.googleusercontent.com/gps-cs-s/AHVAwerix58OXunYizCLahuwUMjs59jhpD5wRotr09vMlIVLc9K0YZIp7ot-t__2bI2yC8xFMGBQioyVXaEx0--pXiji1JnbmtnJTgHIZdeUI17ujaCenJCRIRXm67I3s7bPWZaL-Bj9KA=w408-h544-k-no" target="_blank" class="public">POI Image</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>محامص بهارات العالم — Spices of the World Roasters</h3>
   <div class="meta">Grocery | open | Media: 4</div>
   <div class="media-grid">
@@ -682,7 +702,7 @@
     <a href="https://lh3.googleusercontent.com/gps-cs-s/AHVAweoVj2mf7RQONWkW5Pa3kB1RzOT5mihjMiB_0PTOIHHTcl1xdKTCaetl9xZKX-WQQ386gr2dzap2Q4hjdrS980QbXVIWznIzKTnNVfmjW0UJgk6mnB0RJ_xLTdSE20xyF6OrUSEqFA=w456-h240-k-no" target="_blank" class="public">POI Image</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>تاتش — touch</h3>
   <div class="meta">Corporate | open | Media: 1</div>
   <div class="media-grid">
@@ -691,7 +711,7 @@
     <a href="https://lh3.googleusercontent.com/gps-cs-s/AHVAwep8NZBCMzuopMdCyOcVe86Ql_Nd3jhCUEttT4XC9MEyijm6BjRjkTS2B_wUFlAJBfpH75oEJ7lt1cFc_bEmLTliPJcO1diLovTtu-_f-4DZxBnzp0M5LvQ2dSIPBtgO092C3vQbcN2ZFVvw=w408-h272-k-no" target="_blank" class="public">POI Image</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>يقين للمحاماة و الاستشارات القانونية — Yaqeen Law and Legal Consultancy</h3>
   <div class="meta">Corporate | Open | Media: 1</div>
   <div class="media-grid">
@@ -700,7 +720,7 @@
     <a href="https://lh3.googleusercontent.com/p/AF1QipNuIupZu4ID4aqSG3rE3PUrHJS6cE0hsPqFSl1d=w426-h240-k-no" target="_blank" class="public">POI Image</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>فلورمار — Al Flwrmar</h3>
   <div class="meta">Beauty and Spa | open | Media: 1</div>
   <div class="media-grid">
@@ -709,7 +729,7 @@
     <a href="https://lh3.googleusercontent.com/p/AF1QipM4JaoIfC6LUVVXfkZUJbK6eFbMzr9asC6tZZEz=w408-h544-k-no" target="_blank" class="public">POI Image</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>عيادة نهتم الطبية — Nuhatm Medical Clinics</h3>
   <div class="meta">Hospitals | open | Media: 2</div>
   <div class="media-grid">
@@ -719,7 +739,7 @@
     <a href="https://lh3.googleusercontent.com/gps-cs-s/AHVAweqraBJjvUVEFAXa7vnBs8WedpO1Qw4rYFhqqq4gYTNuQXR0yP1DBEnYFHZBgYtQomvoR_1YuNBH9TcAM2Lw6Oo9dyDPxauDBK4U4PfGt49GVjx2lyI92Im76x74rVnqPDNe23kZwA=w408-h544-k-no" target="_blank" class="public">POI Image</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>رجيم الرشاقة — Diet Fitness</h3>
   <div class="meta">Pharmacies | open | Media: 1</div>
   <div class="media-grid">
@@ -728,7 +748,7 @@
     <a href="https://lh3.googleusercontent.com/gps-cs-s/AHVAwepwNOr8uth5UYj1eW-pscXN8Mik3uWTGY_UEtoPQzfkhJuEFWjpDEmLquMqwa5OjUsN_MrTPc2009OFJbT85BmR17enVeYODAceDFEDjAhAtHryGtV9olR-xB5mF4v2DYAV2BEi=w408-h306-k-no" target="_blank" class="public">POI Image</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>ديار 27 — Diyar 27</h3>
   <div class="meta">Hotels and Accommodations | Open | Media: 1</div>
   <div class="media-grid">
@@ -737,7 +757,7 @@
     <a href="https://lh3.googleusercontent.com/gps-cs-s/AHVAwer3JRERhkL1E0iZQnXZlT-h0YAFozZ35Rnqp6go1v7cZbN1D96NzwyE5_Xpfs9g-Ar30CxGKf7tNKiS0wrt1KWpgAOULdLPhO3qD2reItbzq086zTlVszwKy2cWecpRXu-5TvjvRA=w426-h240-k-no" target="_blank" class="public">POI Image</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>دانكن — Dunkin'</h3>
   <div class="meta">Coffee Shops | open | Media: 9</div>
   <div class="media-grid">
@@ -752,28 +772,28 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/video/upload/v1771500961/alnafl_media/8997b6ca-9008-4ec2-9a94-0d795cd05425_76.mp4" target="_blank" class="video">Video 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>هناء الفيصل للديكور الخشبي — Hana Al-Faisal for Wooden Decoration</h3>
   <div class="meta">Home Goods | open | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771500963/alnafl_media/d1e92f8e-556c-4367-91cb-f37aa496a320_77.jpg" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>شركة سهيل الصناعية — Suhail Industrial Company</h3>
   <div class="meta">Corporate | open | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771500964/alnafl_media/IMG_7502_78.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>بلوم — Bloom</h3>
   <div class="meta">Shopping | open | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771500966/alnafl_media/IMG_7789_79.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>بلاك ستامب — BLACK STAMP</h3>
   <div class="meta">Coffee Shops | open | Media: 1</div>
   <div class="media-grid">
@@ -782,21 +802,21 @@
     <a href="https://lh3.googleusercontent.com/p/AF1QipNerETtCucGuyBFqdr6ujXIVVOZAohDjp2CX_jw=w408-h408-k-no" target="_blank" class="public">POI Image</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>البيك — Al Byk</h3>
   <div class="meta">Restaurants | open | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771500970/alnafl_media/IMG_7676_81.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>ماجد الحقباني العقارية — Majid Al-Haqbani Real Estate</h3>
   <div class="meta">Corporate | open | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771500972/alnafl_media/IMG_7816_82.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>ابداع السرور للحلاقة — Ibda' Alsurur Barbershop</h3>
   <div class="meta">Beauty and Spa | open | Media: 2</div>
   <div class="media-grid">
@@ -804,7 +824,7 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771500975/alnafl_media/eaf5f32c-6827-4f5a-babe-432416783cd9_84.jpg" target="_blank">Photo 2</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>فن الابداع العربية للتبريد والتكييف — Fan Alibda' Alarabiya for Refrigeration and Air Conditioning</h3>
   <div class="meta">Shopping | open | Media: 2</div>
   <div class="media-grid">
@@ -812,14 +832,14 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771500977/alnafl_media/cd226097-18ac-4505-9655-a94466171429_86.jpg" target="_blank">Photo 2</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>سبل للديكور — Subl for decoration</h3>
   <div class="meta">Home Goods | open | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771500979/alnafl_media/2081a7b4-9ce6-4893-ac89-90fc152d39b5_87.jpg" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>تموينات رجبة الذهبي — Al Rjbh Aldhhby Grocery</h3>
   <div class="meta">Grocery | open | Media: 5</div>
   <div class="media-grid">
@@ -832,7 +852,7 @@
     <a href="https://lh3.googleusercontent.com/gps-cs-s/AHVAweq8zmNotdBEroPaI6AJbouXaEUJZQNrrcbGwqYdyJGU0eP5REnxAPSV96-ZknLX5hkTZfT5zwjUL7ULFCc839etedXNAG-d_G76wjXtek0jyIJay6yoP7DHGzXUHvHZv51m-VVI=w533-h240-k-no" target="_blank" class="public">POI Image</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>الدريس — ALDREES</h3>
   <div class="meta">Fuel Stations | open | Media: 4</div>
   <div class="media-grid">
@@ -844,7 +864,7 @@
     <a href="https://lh3.googleusercontent.com/gps-cs-s/AHVAweoSPd7IeIvPVQrkp7kPsDfnANA-bcVOr6sWEH9cmMfCivMEKQ0PGN-W9GCzBKZFXXMmLAEgP3Mx5F6yX0Q0uR8J3JVR2Ey8Y7K2rXYD9y6pZ6X_foFcyKdaKlAtAsDXasooHN0dXCdPjsoY=w408-h306-k-no" target="_blank" class="public">POI Image</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>بواسق — bawasiq</h3>
   <div class="meta">Grocery | open | Media: 2</div>
   <div class="media-grid">
@@ -854,7 +874,7 @@
     <a href="https://lh3.googleusercontent.com/gps-cs-s/AHVAwerlAfeTZrplrdm08JnQUK_Q1PS7l_mhEAS5NWTEOq5nwIubtwwan9HUCXRVzdHZk6kfQNCHm-90Cur8Rqccn8CT695Szxw0QB7lSeFfR4GgjJjZ79G1-PEy05UErDoDpAHT_bYD5MJYzknp=w408-h544-k-no" target="_blank" class="public">POI Image</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>صناع النوارق للمفاتيح — Sona Al Fawariq Keys</h3>
   <div class="meta">life_convenience | open | Media: 3</div>
   <div class="media-grid">
@@ -863,7 +883,7 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501005/alnafl_media/entrance_photo-20260212-082150_101.jpg" target="_blank">Photo 3</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>مدينة بيلي بيز‬‏‏ — Al Mdynh Byly Byz</h3>
   <div class="meta">Entertainment | open | Media: 1</div>
   <div class="media-grid">
@@ -872,7 +892,7 @@
     <a href="https://lh3.googleusercontent.com/gps-cs-s/AHVAweqpq_8eBErrqQqqwVTQwfZ0y-3BfFqhD4wMHyRF86MQl02CARt1HfOWu58tgLGC_NfQNT9JMbDPowUip92tvDfsHvYdiUm8ZEb2Use6-iTEjadFRooHEd8mYnLMhY8g5q0ZLDgjwJZemJee=w408-h725-k-no" target="_blank" class="public">POI Image</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>حلاق جناح الذهبي — Golden Suite Barber</h3>
   <div class="meta">life_convenience | open | Media: 4</div>
   <div class="media-grid">
@@ -884,14 +904,14 @@
     <a href="https://lh3.googleusercontent.com/gps-cs-s/AHVAweqe_TsNPelL8yjfU2ZJMwAH3sG7TaXoRTpHvQEJFrXsoWNw0Q2Kbf_cwgXSuFeL8x9lYcqJZT1LaMC3J4exm2HGzc7fx-j8wr8T7dVRsqTtUOA34PnY9Bl-Tb4xXVOsdEQw0EZc=w408-h544-k-no" target="_blank" class="public">POI Image</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>صناع الفوارق للمفاتيح — For Keys</h3>
   <div class="meta">shopping_distribution | open | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501013/alnafl_media/IMG_7484_107.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>تموينات صالح المهري — market</h3>
   <div class="meta">shopping_distribution | open | Media: 6</div>
   <div class="media-grid">
@@ -905,7 +925,7 @@
     <a href="https://lh3.googleusercontent.com/gps-cs-s/AHVAwerp3Ub_7J6DZ32mBUG5jzkxTPp-vPLY7ra5IuBnuQoEsxLfp2ATmaOiQAEMIpVg_6e9hJCaS8GDeot0PJHNKcI2WifZN_6c8YmjeTXZdFGpMgEkSXCoOKKRVV8lWQI1uwVJJrM=w408-h544-k-no" target="_blank" class="public">POI Image</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>مكتب بيت الشمال العقاري — Bayt Al Shamal Real Estate Office</h3>
   <div class="meta">services_industry | open | Media: 1</div>
   <div class="media-grid">
@@ -914,7 +934,7 @@
     <a href="https://lh3.googleusercontent.com/gps-cs-s/AHVAweoceu1ID_DHMc81RZoc-WQEh9Z-J6QG89-iiqLVAd7mTQ4PDfTXZxLjRUtStgOy1SdshcfH2UvGzztZV0PuP6M2nKHwT9O7AtILzVguK4-nVZjySYSLt94PRXiYbcQ6mWH8BpTW=w408-h306-k-no" target="_blank" class="public">POI Image</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>تموينات شريفة — Market Sharifa</h3>
   <div class="meta">life_convenience | open | Media: 4</div>
   <div class="media-grid">
@@ -924,14 +944,14 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501055/alnafl_media/IMG_0738_118.heic" target="_blank">Photo 4</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>آفاق البيئة — Environmental Horizons</h3>
   <div class="meta">services_industry | open | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501058/alnafl_media/IMG_7612_119.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>زاهية الشام للفطائر و المعجنات — زاهية الشام للفطائر و المعجنات</h3>
   <div class="meta">restaurants | open | Media: 2</div>
   <div class="media-grid">
@@ -941,7 +961,7 @@
     <a href="https://lh3.googleusercontent.com/gps-cs-s/AHVAweoO9kPruaMpzVK2_4CZK86s5MBNW-706LTlJkeDcbRA4T2YpgKc0vrL6PSUJiOIrpBSh2x_wf7uPMjry5lYE3wqkgBl-jAXuHP-e9t_UJnjxyVFxiGgq5Bcy3D71oOA9s5lTSn5vtUDrLFK=w408-h306-k-no" target="_blank" class="public">POI Image</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>دار أيار — Dar Ayar</h3>
   <div class="meta">accommodation | open | Media: 3</div>
   <div class="media-grid">
@@ -952,7 +972,7 @@
     <a href="https://lh3.googleusercontent.com/p/AF1QipPC9Gf6bYo2siX6Inc29MZDkKierR0DwmbQV190=w408-h464-k-no" target="_blank" class="public">POI Image</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>واحة النفل للعقارات — واحة النفل للعقارات</h3>
   <div class="meta">services_industry | open | Media: 1</div>
   <div class="media-grid">
@@ -961,7 +981,7 @@
     <a href="https://lh3.googleusercontent.com/gps-cs-s/AHVAwerx42FcLjdDPpkvvtqoSu65UReST1p-qG7_pDZYANgWk2cuSQg7c0syV38dh1-mMbSf_d6DUjvCrtlOA1-TNknOLUq5gARXGyBVjKV67i3KM_7PDYVELXFZ-YKnDZpKX2mIrZomVQ=w408-h544-k-no" target="_blank" class="public">POI Image</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>محامص لوزة و تمرة للقهوة — محامص لوزة وتمرة - حي النفل</h3>
   <div class="meta">life_convenience | open | Media: 4</div>
   <div class="media-grid">
@@ -973,14 +993,14 @@
     <a href="https://lh3.googleusercontent.com/p/AF1QipN0UTmVYLqxnx3YBIy8GHC2MBCPqyqbIA-UP2YK=w408-h544-k-no" target="_blank" class="public">POI Image</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>خالد المطيري للإلكترونيات — nan</h3>
   <div class="meta">shopping_distribution | open | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/video/upload/v1771501080/alnafl_media/IMG_8071_130.mov" target="_blank" class="video">Video 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>فلافل ثمار — Falafel Themar</h3>
   <div class="meta">restaurants | open | Media: 1</div>
   <div class="media-grid">
@@ -989,7 +1009,7 @@
     <a href="https://lh3.googleusercontent.com/gps-cs-s/AHVAweoT4TLtx7yGZZjQHOdltw6zS1aKqh42xTzquX92VBzjLsRmv6uVMsD3zQCwTtb-kT-L7FjFKC7oIyl6Ku_YO7gfUQwtMh4fCGBvzEy_3Wn1ZxMdFco4Pjd2QanyPE1X8lD3ayb_=w408-h725-k-no" target="_blank" class="public">POI Image</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>نزل أرام — Nozol Aram</h3>
   <div class="meta">accommodation | open | Media: 5</div>
   <div class="media-grid">
@@ -1002,14 +1022,14 @@
     <a href="https://lh3.googleusercontent.com/p/AF1QipMzA3AiyLKkg2cwr5a-U1ZZrfk7hbINDv__y-IO=w408-h544-k-no" target="_blank" class="public">POI Image</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>صراف آلي بنك البلاد — Bank Albilad ATM</h3>
   <div class="meta">finance_insurance | open | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501095/alnafl_media/IMG_7776_137.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>الفنار 2 — Al Fanar 2</h3>
   <div class="meta">finance_insurance | open | Media: 2</div>
   <div class="media-grid">
@@ -1017,7 +1037,7 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501097/alnafl_media/IMG_7618_139.heic" target="_blank">Photo 2</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>بوفية منوة الحياة — Al Mnwh Alhyah Buffet</h3>
   <div class="meta">Restaurants | open | Media: 5</div>
   <div class="media-grid">
@@ -1030,7 +1050,7 @@
     <a href="https://lh3.googleusercontent.com/gps-cs-s/AHVAweqy6smnj5vwmu-qs4UGqJHYkUlgAljSZJSslbO3pmZ4Ihu7fogX6b48rjnp-yC34dZVFU5KMFnNYzbKLi2obd2UTWC2lgtH8FXlsZIdmUhf17BQij_a_GL1XOCIB4VEcHDE0T7LZw=w521-h240-k-no" target="_blank" class="public">POI Image</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>حديقة برجر ماب — Al Hdyqh Brjr Mab</h3>
   <div class="meta">Nature | open | Media: 2</div>
   <div class="media-grid">
@@ -1038,28 +1058,28 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/video/upload/v1771501108/alnafl_media/IMG_8099_146.mov" target="_blank" class="video">Video 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>صالون الديوانية للحلاقة — Al Salwn Aldywanyh Llhlaqh</h3>
   <div class="meta">Beauty and Spa | open | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501111/alnafl_media/10eb09bb-3798-496f-a8c3-754897fd3403_147.jpg" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>ذي بيوتي سيكرتس — THE BEAUTY SECRETS</h3>
   <div class="meta">Shopping | Open | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501112/alnafl_media/IMG_7741_148.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>حلاق شرار الحبردي — Sharar Al-Habardi Barber</h3>
   <div class="meta">Beauty and Spa | open | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501113/alnafl_media/IMG_7857_149.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>مطابيق — MATABEEQ</h3>
   <div class="meta">Restaurants | open | Media: 4</div>
   <div class="media-grid">
@@ -1069,14 +1089,14 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501120/alnafl_media/6b81dcf6-a467-46ff-bc06-ea188f4424f4_153.jpg" target="_blank">Photo 4</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>عبدالله عمير للتبريد والتكييف — Abdullah Umair for Refrigeration and Air Conditioning</h3>
   <div class="meta">Shopping | Open | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501121/alnafl_media/b98e0def-6e47-46ed-bc2f-b9ea2da3abf4_154.jpg" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>نون مينتس — noon MINUTES</h3>
   <div class="meta">Shopping | open | Media: 1</div>
   <div class="media-grid">
@@ -1085,7 +1105,7 @@
     <a href="https://lh3.googleusercontent.com/gps-cs-s/AHVAwepwYrMFOIHHGKcoow_49HGkWg4YUIOZF-ptZonnend_F5bb_9Rh3g-ekNk5ycOQcT4Zrl3roqYl2B7rUBJfC6GxFmKW4oQrmBy7igAwT4bT3AVCDocLeFDysDKsAtdKvc85wKYouQ=w408-h544-k-no" target="_blank" class="public">POI Image</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>فيزورا — VISIORA</h3>
   <div class="meta">Shopping | open | Media: 1</div>
   <div class="media-grid">
@@ -1094,14 +1114,14 @@
     <a href="https://lh3.googleusercontent.com/p/AF1QipNiYI_6Kq6a52ukLUWJx9klwJ2w1HquPFQJKTbZ=w426-h240-k-no" target="_blank" class="public">POI Image</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>اضواء النفل للسباكة والكهرباء — Adwa'a Alnafl  for Plumbing and Electricity</h3>
   <div class="meta">Home Goods | Open | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501127/alnafl_media/8c3ae970-3151-4ba8-82f3-03cf75eb6d09_157.jpg" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>مزاج ليالينا للشيش و المعسلات — Mazaj Layaleena Hookah and Tobacco</h3>
   <div class="meta">life_convenience | open | Media: 5</div>
   <div class="media-grid">
@@ -1112,7 +1132,7 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501130/alnafl_media/IMG_7481_162.heic" target="_blank">Photo 5</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>مزاج بيروت للمعسلات — Mazaj Beirut Tobacco</h3>
   <div class="meta">life_convenience | open | Media: 5</div>
   <div class="media-grid">
@@ -1123,7 +1143,7 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501135/alnafl_media/IMG_7480_167.heic" target="_blank">Photo 5</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>مشغل الترتره للتزيين النسائي — Al Trtrah Womens Beauty Salon</h3>
   <div class="meta">life_convenience | open | Media: 4</div>
   <div class="media-grid">
@@ -1133,7 +1153,7 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501137/alnafl_media/entrance_photo-20260212-122958_171.jpg" target="_blank">Photo 4</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>تموينات حصه الثبيتي — Hessa Al Thubaiti Super Market</h3>
   <div class="meta">life_convenience | open | Media: 4</div>
   <div class="media-grid">
@@ -1143,7 +1163,7 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501142/alnafl_media/%D8%AA%D9%85%D9%88%D9%8A%D9%86%D8%A7%D8%AA%20%D8%AD%D8%B5%D9%87%20%D8%A7%D9%84%D8%AB%D8%A8%D9%8A%D8%AA%D9%8A%20-%20%D9%A7%20%D8%B5%D8%A8%D8%A7%D8%AD%D8%A7%20%D8%A5%D9%84%D9%89%20%D9%A1%20%D9%84%D9%8A%D9%84%D8%A7%20_175.heic" target="_blank">Photo 4</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>بوينت — Point</h3>
   <div class="meta">life_convenience | open | Media: 9</div>
   <div class="media-grid">
@@ -1158,7 +1178,7 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/video/upload/v1771501157/alnafl_media/IMG_1943_184.mov" target="_blank" class="video">Video 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>صراف الي بنك البلاد — Bank Albilad ATM</h3>
   <div class="meta">finance_insurance | open | Media: 3</div>
   <div class="media-grid">
@@ -1169,7 +1189,7 @@
     <a href="https://lh3.googleusercontent.com/gps-cs-s/AHVAwerky6et9-u4RTUvby5V3NBYDYfzq_O1nqB0EigBE55vEf4LYSHUo4Z6k7vG0Xofv_kBi_h4JlaRCthjS2PF0kf1dVMK4rOztzlR0wRu1QDE-cHrsM0xDmuJAoswDfoyvwumh1I7SmHG796l=w408-h892-k-no" target="_blank" class="public">POI Image</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>مركز خدمة اي سي ديلكو — ACDELCO</h3>
   <div class="meta">life_convenience | open | Media: 3</div>
   <div class="media-grid">
@@ -1178,7 +1198,7 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501162/alnafl_media/entrance_photo-20260212-080236_190.jpg" target="_blank">Photo 3</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>مجمع عيادات الحياة — Al Hayat Medical Clinics</h3>
   <div class="meta">health_medical | open | Media: 4</div>
   <div class="media-grid">
@@ -1188,7 +1208,7 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501164/alnafl_media/%D9%85%D8%AC%D9%85%D8%B9%20%D8%B9%D9%8A%D8%A7%D8%AF%D8%A7%D8%AA%20%D8%A7%D9%84%D8%AD%D9%8A%D8%A7%D8%A9%20-%20%D9%A8%20%D8%B5%D8%A8%D8%A7%D8%AD%D8%A7%20%D8%A5%D9%84%D9%89%20%D9%A1%D9%A2%20%D8%A7%D9%84%D9%84%D9%8A%D9%84%20%D8%A7%D9%84%D8%AC%D9%85%D8%B9%D9%87%20%D9%85%D8%BA%D9%84%D9%82%20_194.heic" target="_blank">Photo 4</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>صيدلية ليمون — Lemon Pharmacy</h3>
   <div class="meta">health_medical | open | Media: 5</div>
   <div class="media-grid">
@@ -1201,7 +1221,7 @@
     <a href="https://lh3.googleusercontent.com/p/AF1QipM7wbUMxCBEtjCqBg9K6uIU6iSx_xEneEdWaQCb=w426-h240-k-no" target="_blank" class="public">POI Image</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>التعديل السحري — Al Tadeel Al Sehri</h3>
   <div class="meta">life_convenience | open | Media: 5</div>
   <div class="media-grid">
@@ -1214,7 +1234,7 @@
     <a href="https://lh3.googleusercontent.com/gps-cs-s/AHVAwep-iqKpUc6PLIDDERS4Pq9HKR4m8MxS8QXDU5WmfNQ50l3G-YPsAiEbBmjp-iJ11z6loZRzcXJ8RUaFrh3jbEXX4WV6_sFDHKqGm0eKKvqkI8CBEcwUHP6SZ3I5Ktg9QTX5JTuy-hMPnQM=w408-h544-k-no" target="_blank" class="public">POI Image</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>مكتب جناحان للترجمة — مكتب جناحان للترجمة</h3>
   <div class="meta">services_industry | open | Media: 3</div>
   <div class="media-grid">
@@ -1225,7 +1245,7 @@
     <a href="https://lh3.googleusercontent.com/gps-cs-s/AHVAweoLYASDgi8p5Mh7y-1uxbt8grq0bNLN3kvJVkGjkkQWzwj-ZlAEHfixjWO9RndkMpEQwV1brxeYlr3w9LcCpWUvkk9wV8rTomTk-646L329ioBHMTj1z2w4s2ZYcf8RL3Ys8VD2jEobsspp=w408-h306-k-no" target="_blank" class="public">POI Image</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>ثنيه ديزاين للخياطة النسائيه — ثنيه ديزاين للخياطه النسائيه</h3>
   <div class="meta">life_convenience | open | Media: 3</div>
   <div class="media-grid">
@@ -1236,7 +1256,7 @@
     <a href="https://lh3.googleusercontent.com/p/AF1QipMkDIb2zbiehMYuKL4cVDDD595WE-7N-0JHhR-T=w408-h725-k-no" target="_blank" class="public">POI Image</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>كبدة عرب — Kebda Arab</h3>
   <div class="meta">restaurants | open | Media: 8</div>
   <div class="media-grid">
@@ -1252,7 +1272,7 @@
     <a href="https://lh3.googleusercontent.com/p/AF1QipNSiOmgRGwn-w73MDQV2M3r-dHyppG-9QqTm0CQ=w408-h305-k-no" target="_blank" class="public">POI Image</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>أقمشة دكان كتان نسائية — Dukaan Kataan</h3>
   <div class="meta">shopping_distribution | open | Media: 7</div>
   <div class="media-grid">
@@ -1267,7 +1287,7 @@
     <a href="https://lh3.googleusercontent.com/gps-cs-s/AHVAweq3iPIDT4WdlML3hUzJc_I3PgNEoB6vsdpoCir3EMhkvxRT_6iOoMP0i92VI7IIQ18RDE2W8JwoFGxSIG9a3mROU8l-DKSY1qOljEBzrCpVAJPpN9j-hnkhUkIe4n_wCO3rIlg-=w408-h544-k-no" target="_blank" class="public">POI Image</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>شكن — CHKN</h3>
   <div class="meta">restaurants | temporary_closed | Media: 3</div>
   <div class="media-grid">
@@ -1278,7 +1298,7 @@
     <a href="https://lh3.googleusercontent.com/p/AF1QipPBEviydmyeLG7vGFfvZIBuncDzeUC1fxAQAiiy=w408-h583-k-no" target="_blank" class="public">POI Image</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>واحد فول — Wahid Fol</h3>
   <div class="meta">restaurants | open | Media: 7</div>
   <div class="media-grid">
@@ -1293,7 +1313,7 @@
     <a href="https://lh3.googleusercontent.com/gps-cs-s/AHVAwerIw5Db0eWt3o_h3lrq_5IN9OIZzON5sl8kPcMHrlkD0euVQzP2qgz99miUKThwvMdlfDtLRNK8iS1lwCXqcPuvW1_nSjfQnMaCytw5E960nqZqEGDFyB20iLrPX5VMezyK30suXO9-vfmO=w408-h569-k-no" target="_blank" class="public">POI Image</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>كوستا كوفي — Costa Coffee</h3>
   <div class="meta">restaurants | open | Media: 6</div>
   <div class="media-grid">
@@ -1307,7 +1327,7 @@
     <a href="https://lh3.googleusercontent.com/gps-cs-s/AHVAwepC0vIvi5ZZqoq-KXmEgLOUY5GdzqOjhzzczOatxsR3J1rHWPDs5XpA05nhjVkZ5NEddOXY8IwzS-TZQLiRs5qWE9xUUvu3ZWRnDX2UkcK1sWwXLhTxkabnVUo9LqEWMsA-EHFh=w408-h306-k-no" target="_blank" class="public">POI Image</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>حطبة — HATABA</h3>
   <div class="meta">restaurants | open | Media: 4</div>
   <div class="media-grid">
@@ -1317,7 +1337,7 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501245/alnafl_media/IMG_7472_245.heic" target="_blank">Photo 4</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>تموينات الايادي المبدعة — nan</h3>
   <div class="meta">life_convenience | open | Media: 8</div>
   <div class="media-grid">
@@ -1331,7 +1351,7 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501253/alnafl_media/IMG_0630_253.heic" target="_blank">Photo 8</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>حلاق عبدالعزيز العوفي — nan</h3>
   <div class="meta">life_convenience | open | Media: 4</div>
   <div class="media-grid">
@@ -1341,7 +1361,7 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501262/alnafl_media/IMG_0615_257.heic" target="_blank">Photo 4</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>عروبة المجد للإطارات و البطاريات — Uroobat Al Majd Tires and Batteries</h3>
   <div class="meta">life_convenience | open | Media: 3</div>
   <div class="media-grid">
@@ -1352,7 +1372,7 @@
     <a href="https://lh3.googleusercontent.com/p/AF1QipMMQMqNTjXJzrzbX31j1zzNJAZxn1YIiJTGi2Zq=w408-h304-k-no" target="_blank" class="public">POI Image</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>مكتبة روابي النفل — nan</h3>
   <div class="meta">life_convenience | open | Media: 10</div>
   <div class="media-grid">
@@ -1368,7 +1388,7 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/video/upload/v1771501290/alnafl_media/IMG_8083_270.mov" target="_blank" class="video">Video 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>عبدالعزيز العوفي للمقاولات — nan</h3>
   <div class="meta">services_industry | temporary_closed | Media: 4</div>
   <div class="media-grid">
@@ -1378,7 +1398,7 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501295/alnafl_media/IMG_0610_274.heic" target="_blank">Photo 4</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>الوعلان لتأجير السيارات — Wallan Rent A Car</h3>
   <div class="meta">life_convenience | open | Media: 5</div>
   <div class="media-grid">
@@ -1391,7 +1411,7 @@
     <a href="https://lh3.googleusercontent.com/gps-cs-s/AHVAweoWAfP3ICXlpooVYJHuveksQHLCQVrWDZ7sZdzXehj4S7PP35pC_gX1QPxUNCiv6vlwdMhTfGg09_1aTpefO-n5fbRmx79WoRRCQYrPl595mcCo8BmtG9p6PM6RcwPdx71-l50=w408-h544-k-no" target="_blank" class="public">POI Image</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>مكتب عبدالعزيز العوفي للعقارات — nan</h3>
   <div class="meta">services_industry | open | Media: 5</div>
   <div class="media-grid">
@@ -1402,7 +1422,7 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501359/alnafl_media/IMG_0614_284.heic" target="_blank">Photo 5</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>مصرف الراجحي — alrajhi bank</h3>
   <div class="meta">finance_insurance | open | Media: 6</div>
   <div class="media-grid">
@@ -1414,7 +1434,7 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/video/upload/v1771501365/alnafl_media/IMG_8082_290.mov" target="_blank" class="video">Video 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>مطعم خليج الكبسة البخاري — nan</h3>
   <div class="meta">restaurants | open | Media: 7</div>
   <div class="media-grid">
@@ -1427,7 +1447,7 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501371/alnafl_media/IMG_0622_297.heic" target="_blank">Photo 7</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>دار هبة — nan</h3>
   <div class="meta">shopping_distribution | open | Media: 4</div>
   <div class="media-grid">
@@ -1439,7 +1459,7 @@
     <a href="https://lh3.googleusercontent.com/p/AF1QipOoZQZjwZu_4gMoxxkadq_6OJ6FdxX5NsO50VuA=w408-h544-k-no" target="_blank" class="public">POI Image</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>جمعية المشاريع البيئية التعاونية — nan</h3>
   <div class="meta">shopping_distribution | open | Media: 5</div>
   <div class="media-grid">
@@ -1450,7 +1470,7 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501411/alnafl_media/IMG_0623_306.heic" target="_blank">Photo 5</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>كيف — CAVE</h3>
   <div class="meta">restaurants | open | Media: 7</div>
   <div class="media-grid">
@@ -1463,7 +1483,7 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/video/upload/v1771501417/alnafl_media/IMG_1884_313.mov" target="_blank" class="video">Video 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>خياط الذوق الفريد للخياطة النسائية — خياط الذوق الفريد للخياطة النسائية - النفل</h3>
   <div class="meta">life_convenience | open | Media: 5</div>
   <div class="media-grid">
@@ -1476,21 +1496,21 @@
     <a href="https://lh3.googleusercontent.com/p/AF1QipPTsGfIyDuaIVj40gI-fyGOnoUQs_LzgRfg3hHF=w408-h306-k-no" target="_blank" class="public">POI Image</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>صراف بنك البلاد — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501424/alnafl_media/IMG_7476_319.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>سيدلكو — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501425/alnafl_media/IMG_7477_320.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>سماء ندى — </h3>
   <div class="meta"> | nan | Media: 2</div>
   <div class="media-grid">
@@ -1498,21 +1518,21 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501428/alnafl_media/IMG_7486_322.heic" target="_blank">Photo 2</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>بيل اند بون مغلق موقتا — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501430/alnafl_media/IMG_7491_323.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>ووش — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501430/alnafl_media/IMG_7492_324.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>الدفه — </h3>
   <div class="meta"> | nan | Media: 2</div>
   <div class="media-grid">
@@ -1520,7 +1540,7 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501434/alnafl_media/IMG_7493_326.heic" target="_blank">Photo 2</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>إفران الحطب — </h3>
   <div class="meta"> | nan | Media: 2</div>
   <div class="media-grid">
@@ -1528,7 +1548,7 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501437/alnafl_media/IMG_7496_328.heic" target="_blank">Photo 2</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>التويجري للمستلزمات الرجالية — </h3>
   <div class="meta"> | nan | Media: 2</div>
   <div class="media-grid">
@@ -1536,7 +1556,7 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501439/alnafl_media/IMG_7498_330.heic" target="_blank">Photo 2</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>قرية العصافير — </h3>
   <div class="meta"> | nan | Media: 2</div>
   <div class="media-grid">
@@ -1544,98 +1564,98 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501441/alnafl_media/IMG_7501_332.heic" target="_blank">Photo 2</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>الفالينك — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501443/alnafl_media/IMG_7503_333.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>احمد الدوسري محاسبون و مراجعون — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501444/alnafl_media/IMG_7505_334.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>آمر — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501448/alnafl_media/IMG_7506_335.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>دائرة الحدث — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501449/alnafl_media/IMG_7507_336.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>بيت الدرعية لإدارة المشاريع — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501450/alnafl_media/IMG_7508_337.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>مصنع زهران لأسطح الصناعية — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501451/alnafl_media/IMG_7509_338.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>فيجنري ستراكتشرز — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501453/alnafl_media/IMG_7510_339.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>جلنار المستقبل — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501453/alnafl_media/IMG_7511_340.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>زاوية زين — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501455/alnafl_media/IMG_7512_341.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>تروفاليو — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501456/alnafl_media/IMG_7513_342.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>لايف لافر — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501457/alnafl_media/IMG_7514_343.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>مركز ليلا للتزيين النسائي — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501457/alnafl_media/IMG_7515_344.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>صالون قلعة الفريدة للتزيين النسائي — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501458/alnafl_media/IMG_7517_345.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>كشري نوارة — </h3>
   <div class="meta"> | nan | Media: 2</div>
   <div class="media-grid">
@@ -1643,14 +1663,14 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501461/alnafl_media/IMG_7520_347.heic" target="_blank">Photo 2</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>المسكوف — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501462/alnafl_media/IMG_7522_348.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>ارتيفور — </h3>
   <div class="meta"> | nan | Media: 2</div>
   <div class="media-grid">
@@ -1658,28 +1678,28 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501467/alnafl_media/IMG_7524_350.heic" target="_blank">Photo 2</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>كاستنا — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501469/alnafl_media/IMG_7525_351.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>الصندوق الأبيض للديكور — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501470/alnafl_media/IMG_7526_352.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>زوايا لاجهزة السلامة — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501473/alnafl_media/IMG_7527_353.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>مجمع الآفاق لطب الاسنان — </h3>
   <div class="meta"> | nan | Media: 3</div>
   <div class="media-grid">
@@ -1688,7 +1708,7 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501476/alnafl_media/IMG_7529_356.heic" target="_blank">Photo 3</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>باسكن روبنز — </h3>
   <div class="meta"> | nan | Media: 2</div>
   <div class="media-grid">
@@ -1696,7 +1716,7 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501479/alnafl_media/IMG_7532_358.heic" target="_blank">Photo 2</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>صامولجي — </h3>
   <div class="meta"> | nan | Media: 2</div>
   <div class="media-grid">
@@ -1704,7 +1724,7 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501481/alnafl_media/IMG_7536_360.heic" target="_blank">Photo 2</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>ميم سويت — </h3>
   <div class="meta"> | nan | Media: 2</div>
   <div class="media-grid">
@@ -1712,7 +1732,7 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501483/alnafl_media/IMG_7539_362.heic" target="_blank">Photo 2</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>ليزي آي — </h3>
   <div class="meta"> | nan | Media: 2</div>
   <div class="media-grid">
@@ -1720,21 +1740,21 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501484/alnafl_media/IMG_7541_364.heic" target="_blank">Photo 2</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>بقشي — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501485/alnafl_media/IMG_7544_365.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>ديلي كوب — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501486/alnafl_media/IMG_7546_366.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>بصمة الرفوف — </h3>
   <div class="meta"> | nan | Media: 2</div>
   <div class="media-grid">
@@ -1742,28 +1762,28 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501489/alnafl_media/IMG_7547_368.heic" target="_blank">Photo 2</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>ركائز ميثاق للعقارات — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501490/alnafl_media/IMG_7549_369.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>سرعات للدراجات الهوائية — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501491/alnafl_media/IMG_7550_370.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>مكملات الرياضية — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501491/alnafl_media/IMG_7551_371.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>اير — </h3>
   <div class="meta"> | nan | Media: 2</div>
   <div class="media-grid">
@@ -1771,28 +1791,28 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501495/alnafl_media/IMG_7554_373.heic" target="_blank">Photo 2</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>كلو — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501497/alnafl_media/IMG_7555_374.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>زبدية — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501498/alnafl_media/IMG_7558_375.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>الجمعية الخيرية الصحية لرعاية المرضى — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501499/alnafl_media/IMG_7559_376.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>احلا لبس للرياضه — </h3>
   <div class="meta"> | nan | Media: 2</div>
   <div class="media-grid">
@@ -1800,70 +1820,70 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501501/alnafl_media/IMG_7560_378.heic" target="_blank">Photo 2</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>لوف — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501502/alnafl_media/IMG_7562_379.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>ستايلي — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501503/alnafl_media/IMG_7564_380.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>دقة رقم الاستشارات الهندسية — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501504/alnafl_media/IMG_7566_381.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>كفاءة الأعمال للاستشارات المهنية — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501505/alnafl_media/IMG_7567_382.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>تسهيل — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501506/alnafl_media/IMG_7568_383.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>أبعاد الرؤية المستقلة للمقاولات — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501508/alnafl_media/IMG_7569_384.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>يزاين — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501510/alnafl_media/IMG_7570_385.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>جبل الأمان للمقاولات العامة — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501513/alnafl_media/IMG_7571_386.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>تسهيل — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501514/alnafl_media/IMG_7572_387.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>صيدلية النهدي — </h3>
   <div class="meta"> | nan | Media: 2</div>
   <div class="media-grid">
@@ -1871,35 +1891,35 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501517/alnafl_media/IMG_7573_389.heic" target="_blank">Photo 2</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>مكتب سما العقار للعقارات — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501518/alnafl_media/IMG_7575_390.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>سعود السميري للمحاماه و الاستشارات القانونية- من ٩ صباحا إلى ٥ مساءا الجمعه و السبت مغلق — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501519/alnafl_media/IMG_7576_391.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>مركز حلول النخبة للتدريب — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501521/alnafl_media/IMG_7577_392.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>نفود الطبية — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501523/alnafl_media/IMG_7578_393.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>صيدلية أنوفا — </h3>
   <div class="meta"> | nan | Media: 2</div>
   <div class="media-grid">
@@ -1907,14 +1927,14 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501525/alnafl_media/IMG_7580_395.heic" target="_blank">Photo 2</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>ساركو — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501527/alnafl_media/IMG_7583_396.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>قمة الطب — </h3>
   <div class="meta"> | nan | Media: 2</div>
   <div class="media-grid">
@@ -1922,7 +1942,7 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501529/alnafl_media/IMG_7586_398.heic" target="_blank">Photo 2</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>صيدلية وجد الصحة على مدار الساعه — </h3>
   <div class="meta"> | nan | Media: 3</div>
   <div class="media-grid">
@@ -1931,14 +1951,14 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501535/alnafl_media/IMG_7590_401.heic" target="_blank">Photo 3</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>معين — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501537/alnafl_media/IMG_7591_402.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>احتياجات الحيوان من ١٠ صباحا إلى ١٢ ليلا يوم الجمعة من ٤ عصرا إلى ١٢ ليلا — </h3>
   <div class="meta"> | nan | Media: 2</div>
   <div class="media-grid">
@@ -1946,7 +1966,7 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501541/alnafl_media/IMG_7592_404.heic" target="_blank">Photo 2</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>هابي روز للزهور — </h3>
   <div class="meta"> | nan | Media: 2</div>
   <div class="media-grid">
@@ -1954,7 +1974,7 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501544/alnafl_media/IMG_7594_406.heic" target="_blank">Photo 2</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>خلاد البشر — </h3>
   <div class="meta"> | nan | Media: 2</div>
   <div class="media-grid">
@@ -1962,7 +1982,7 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501547/alnafl_media/IMG_7603_408.heic" target="_blank">Photo 2</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>العيون السليمة للنظارات — </h3>
   <div class="meta"> | nan | Media: 2</div>
   <div class="media-grid">
@@ -1970,42 +1990,42 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501549/alnafl_media/IMG_7606_410.heic" target="_blank">Photo 2</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>المسافر من ١٠ صباحا إلى ٤ عصرا — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501551/alnafl_media/IMG_7610_411.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>منجم تطوير الأعمال المالية — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501552/alnafl_media/IMG_7613_412.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>سوارم — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501553/alnafl_media/IMG_7614_413.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>هيئة الزكاة و الضريبة و الجمارك — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501554/alnafl_media/IMG_7615_414.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>الصالة الشاملة — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501555/alnafl_media/IMG_7616_415.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>موطن — </h3>
   <div class="meta"> | nan | Media: 2</div>
   <div class="media-grid">
@@ -2013,7 +2033,7 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501557/alnafl_media/IMG_7623_417.heic" target="_blank">Photo 2</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>المنيع — </h3>
   <div class="meta"> | nan | Media: 2</div>
   <div class="media-grid">
@@ -2021,14 +2041,14 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501560/alnafl_media/IMG_7627_419.heic" target="_blank">Photo 2</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>تمكين — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501561/alnafl_media/IMG_7628_420.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>محمد ناغي للسيارات — </h3>
   <div class="meta"> | nan | Media: 3</div>
   <div class="media-grid">
@@ -2037,7 +2057,7 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501564/alnafl_media/IMG_7632_423.heic" target="_blank">Photo 3</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>رولز رويس — </h3>
   <div class="meta"> | nan | Media: 2</div>
   <div class="media-grid">
@@ -2045,14 +2065,14 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501568/alnafl_media/IMG_7633_425.heic" target="_blank">Photo 2</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>محمد ناغي للسيارات — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501569/alnafl_media/IMG_7635_426.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>المركز الوطني لتنمية الغطاء النباتي ومكافحة التصحر — </h3>
   <div class="meta"> | nan | Media: 2</div>
   <div class="media-grid">
@@ -2060,35 +2080,35 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501571/alnafl_media/IMG_7637_428.heic" target="_blank">Photo 2</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>المنظمة العالمية للمياه — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501573/alnafl_media/IMG_7640_429.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>اتمال- ٨ صباحا إلى ٥ مساءا الجمعه و السبت — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501574/alnafl_media/IMG_7649_430.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>لفتيس — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501577/alnafl_media/IMG_7650_431.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>أم كوتور — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501578/alnafl_media/IMG_7651_432.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>زاكس — </h3>
   <div class="meta"> | nan | Media: 2</div>
   <div class="media-grid">
@@ -2096,7 +2116,7 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501580/alnafl_media/IMG_7652_434.heic" target="_blank">Photo 2</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>كرز لنن — </h3>
   <div class="meta"> | nan | Media: 2</div>
   <div class="media-grid">
@@ -2104,28 +2124,28 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501583/alnafl_media/IMG_7656_436.heic" target="_blank">Photo 2</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>غلودينة — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501585/alnafl_media/IMG_7658_437.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>بيهايف — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501586/alnafl_media/IMG_7660_438.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>موفي بوتيك — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501586/alnafl_media/IMG_7662_439.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>براندز فور لس — </h3>
   <div class="meta"> | nan | Media: 4</div>
   <div class="media-grid">
@@ -2135,63 +2155,63 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501594/alnafl_media/IMG_7666_443.heic" target="_blank">Photo 4</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>سينابول — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501596/alnafl_media/IMG_7667_444.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>ان وأي ايف — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501603/alnafl_media/IMG_7668_445.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>ذيه سول — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501605/alnafl_media/IMG_7671_446.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>برجر كنج — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501606/alnafl_media/IMG_7673_447.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>باستليتا — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501607/alnafl_media/IMG_7674_448.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>الجازع — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501609/alnafl_media/IMG_7679_449.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>اجمل — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501611/alnafl_media/IMG_7682_450.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>اورنج — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501612/alnafl_media/IMG_7684_451.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>نسفى — </h3>
   <div class="meta"> | nan | Media: 3</div>
   <div class="media-grid">
@@ -2200,7 +2220,7 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501619/alnafl_media/IMG_7688_454.heic" target="_blank">Photo 3</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>إبراق — </h3>
   <div class="meta"> | nan | Media: 3</div>
   <div class="media-grid">
@@ -2209,14 +2229,14 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501623/alnafl_media/IMG_7693_457.heic" target="_blank">Photo 3</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>بولو كلوب — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501625/alnafl_media/IMG_7697_458.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>ناتشورال تاتش — </h3>
   <div class="meta"> | nan | Media: 2</div>
   <div class="media-grid">
@@ -2224,28 +2244,28 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501628/alnafl_media/IMG_7698_460.heic" target="_blank">Photo 2</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>لاسنزا لانجري — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501630/alnafl_media/IMG_7700_461.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>الحميضي — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501630/alnafl_media/IMG_7701_462.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>صيدلية وايتس — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501632/alnafl_media/IMG_7702_463.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>يو اس بولو — </h3>
   <div class="meta"> | nan | Media: 2</div>
   <div class="media-grid">
@@ -2253,7 +2273,7 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501635/alnafl_media/IMG_7704_465.heic" target="_blank">Photo 2</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>اردين — </h3>
   <div class="meta"> | nan | Media: 2</div>
   <div class="media-grid">
@@ -2261,7 +2281,7 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501638/alnafl_media/IMG_7706_467.heic" target="_blank">Photo 2</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>ايوا — </h3>
   <div class="meta"> | nan | Media: 3</div>
   <div class="media-grid">
@@ -2270,7 +2290,7 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501643/alnafl_media/IMG_7708_470.heic" target="_blank">Photo 3</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>الماجد للعود — </h3>
   <div class="meta"> | nan | Media: 3</div>
   <div class="media-grid">
@@ -2279,7 +2299,7 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501647/alnafl_media/IMG_7716_473.heic" target="_blank">Photo 3</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>درعه — </h3>
   <div class="meta"> | nan | Media: 2</div>
   <div class="media-grid">
@@ -2287,35 +2307,35 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501652/alnafl_media/IMG_7719_475.heic" target="_blank">Photo 2</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>فيرجن — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501653/alnafl_media/IMG_7722_476.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>لوز و جوز — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501656/alnafl_media/IMG_7723_477.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>كارفور — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501659/alnafl_media/IMG_7725_478.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>جهاز خدمات ابشر — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501661/alnafl_media/IMG_7727_479.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>اردين — </h3>
   <div class="meta"> | nan | Media: 2</div>
   <div class="media-grid">
@@ -2323,7 +2343,7 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501664/alnafl_media/IMG_7730_481.heic" target="_blank">Photo 2</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>ماتش — </h3>
   <div class="meta"> | nan | Media: 3</div>
   <div class="media-grid">
@@ -2332,14 +2352,14 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501668/alnafl_media/IMG_7732_484.heic" target="_blank">Photo 3</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>كراميل باث اند بودي — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501669/alnafl_media/IMG_7734_485.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>مهيار — </h3>
   <div class="meta"> | nan | Media: 2</div>
   <div class="media-grid">
@@ -2347,21 +2367,21 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501671/alnafl_media/IMG_7736_487.heic" target="_blank">Photo 2</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>سكتشرز — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501672/alnafl_media/IMG_7737_488.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>ايس كيوب — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501674/alnafl_media/IMG_7740_489.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>بولو كلوب — </h3>
   <div class="meta"> | nan | Media: 2</div>
   <div class="media-grid">
@@ -2369,35 +2389,35 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501681/alnafl_media/IMG_7742_491.heic" target="_blank">Photo 2</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>ايف روشيه — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501684/alnafl_media/IMG_7745_492.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>فاشن ليدي — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501686/alnafl_media/IMG_7749_493.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>اون تايم — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501689/alnafl_media/IMG_7750_494.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>بولو كلوب — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501692/alnafl_media/IMG_7751_495.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>تشارلز اند كيت — </h3>
   <div class="meta"> | nan | Media: 2</div>
   <div class="media-grid">
@@ -2405,7 +2425,7 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501697/alnafl_media/IMG_7753_497.heic" target="_blank">Photo 2</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>بيرشكا — </h3>
   <div class="meta"> | nan | Media: 2</div>
   <div class="media-grid">
@@ -2413,126 +2433,126 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501700/alnafl_media/IMG_7756_499.heic" target="_blank">Photo 2</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>ماما بنز كافيه — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501705/alnafl_media/IMG_7762_500.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>عبدالصمد القرشي — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501708/alnafl_media/IMG_7765_501.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>بول — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501710/alnafl_media/IMG_7768_502.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>قطن هوم — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501713/alnafl_media/IMG_7769_503.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>نعومي — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501716/alnafl_media/IMG_7770_504.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>كيو اند ايه — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501717/alnafl_media/IMG_7773_505.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>موموسو — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501722/alnafl_media/IMG_7775_506.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>عجوة النخلة — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501725/alnafl_media/IMG_7778_507.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>موج فون — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501726/alnafl_media/IMG_7779_508.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>ومن سيكريت — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501728/alnafl_media/IMG_7781_509.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>عطور عين — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501729/alnafl_media/IMG_7782_510.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>لفتيس — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501731/alnafl_media/IMG_7786_511.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>لينك — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501733/alnafl_media/IMG_7788_512.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>مدارس ابن خلدون — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501734/alnafl_media/IMG_7790_513.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>برجر بكس — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501736/alnafl_media/IMG_7793_514.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>إراف الطبية — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501737/alnafl_media/IMG_7795_515.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>فطور الأجازة — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501739/alnafl_media/IMG_7799_516.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>مغاسل ابراهيم عواجي — </h3>
   <div class="meta"> | nan | Media: 2</div>
   <div class="media-grid">
@@ -2540,49 +2560,49 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501746/alnafl_media/IMG_7798_518.heic" target="_blank">Photo 2</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>حلاق سعد التميمي — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501748/alnafl_media/IMG_7800_519.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>مغاسل ركن القبلي — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501749/alnafl_media/IMG_7802_520.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>شاهي موزون — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501751/alnafl_media/IMG_7803_521.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>لقيمات احلا زمان — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501755/alnafl_media/IMG_7804_522.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>الاتقان و التميز للمقاولات — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501758/alnafl_media/IMG_7805_523.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>حلاق الحرف العاشر — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501760/alnafl_media/IMG_7806_524.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>بقاله بذور التميز — </h3>
   <div class="meta"> | nan | Media: 3</div>
   <div class="media-grid">
@@ -2591,21 +2611,21 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501764/alnafl_media/IMG_7810_527.heic" target="_blank">Photo 3</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>دوقنوت — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501766/alnafl_media/IMG_7812_528.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>جافا قايز — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501776/alnafl_media/IMG_7813_529.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>واحة الورود — </h3>
   <div class="meta"> | nan | Media: 2</div>
   <div class="media-grid">
@@ -2613,14 +2633,14 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501798/alnafl_media/IMG_7815_531.heic" target="_blank">Photo 2</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>حلاق ابداع السرور — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501801/alnafl_media/IMG_7817_532.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>أسواق لي مارت — </h3>
   <div class="meta"> | nan | Media: 2</div>
   <div class="media-grid">
@@ -2628,14 +2648,14 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501805/alnafl_media/IMG_7819_534.heic" target="_blank">Photo 2</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>مطعم اضواء النفل — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501807/alnafl_media/IMG_7820_535.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>محل اضواء النفل للسباكة و الكهرباء — </h3>
   <div class="meta"> | nan | Media: 2</div>
   <div class="media-grid">
@@ -2643,7 +2663,7 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501813/alnafl_media/IMG_7822_537.heic" target="_blank">Photo 2</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>نبت الخير للخضار و الفواكه و التمور — </h3>
   <div class="meta"> | nan | Media: 2</div>
   <div class="media-grid">
@@ -2651,28 +2671,28 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501818/alnafl_media/IMG_7823_539.heic" target="_blank">Photo 2</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>شاس لخدمات المياه — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501823/alnafl_media/IMG_7825_540.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>الشبل الابيض — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501825/alnafl_media/IMG_7826_541.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>دار الوسيله للمقاولات — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501826/alnafl_media/IMG_7827_542.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>تموينات انوار النفل — </h3>
   <div class="meta"> | nan | Media: 4</div>
   <div class="media-grid">
@@ -2682,28 +2702,28 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501835/alnafl_media/IMG_7830_546.heic" target="_blank">Photo 4</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>بيترومين — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501838/alnafl_media/IMG_7834_547.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>الإطار الفضي — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501840/alnafl_media/IMG_7836_548.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>عيد العنزي لصيانة السيارات — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501842/alnafl_media/IMG_7838_549.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>عبدالله عمير للتبريد و التكييف — </h3>
   <div class="meta"> | nan | Media: 2</div>
   <div class="media-grid">
@@ -2711,7 +2731,7 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501848/alnafl_media/IMG_7851_551.heic" target="_blank">Photo 2</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>مغاسل ريم ال تويم — </h3>
   <div class="meta"> | nan | Media: 2</div>
   <div class="media-grid">
@@ -2719,21 +2739,21 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501850/alnafl_media/IMG_7855_553.heic" target="_blank">Photo 2</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>شاي عزيز — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501853/alnafl_media/IMG_7858_554.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>دار ديرم للتزيين النسائي — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501855/alnafl_media/IMG_7863_555.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>علوم السندوتش — </h3>
   <div class="meta"> | nan | Media: 3</div>
   <div class="media-grid">
@@ -2742,49 +2762,49 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501860/alnafl_media/IMG_7922_558.heic" target="_blank">Photo 3</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>تموينات الأيادي — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/video/upload/v1771501872/alnafl_media/IMG_8086_559.mov" target="_blank" class="video">Video 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>مغسله الجبر — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/video/upload/v1771501892/alnafl_media/IMG_8069_560.mov" target="_blank" class="video">Video 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>محامص لوز و تمرة — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/video/upload/v1771501897/alnafl_media/IMG_8070_561.mov" target="_blank" class="video">Video 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>التويجري — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/video/upload/v1771501903/alnafl_media/IMG_8097_562.mov" target="_blank" class="video">Video 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>قرية العصافير — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/video/upload/v1771501906/alnafl_media/IMG_8098_563.mov" target="_blank" class="video">Video 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>باسكن روبنز — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/video/upload/v1771501909/alnafl_media/b2340bd2-f444-480d-b29f-218ea41b7d40_564.mp4" target="_blank" class="video">Video 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>آير — </h3>
   <div class="meta"> | nan | Media: 2</div>
   <div class="media-grid">
@@ -2792,42 +2812,42 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/video/upload/v1771501927/alnafl_media/IMG_8105_566.mov" target="_blank" class="video">Video 2</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>زبدية — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/video/upload/v1771501944/alnafl_media/IMG_8109_567.mov" target="_blank" class="video">Video 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>أنوفا — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/video/upload/v1771501948/alnafl_media/IMG_8108_568.mov" target="_blank" class="video">Video 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>مطاعم دار الخليج العربي البخاري — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/video/upload/v1771501951/alnafl_media/6f3de277-9d42-439f-98b7-942ab404e397_569.mp4" target="_blank" class="video">Video 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>مغاسل الضيف — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/video/upload/v1771501955/alnafl_media/80b74ea6-f126-4eae-8f97-7b5e974a568f_570.mp4" target="_blank" class="video">Video 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>حصه النفيعي للديكور الخشبي — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/video/upload/v1771501962/alnafl_media/b01b7157-f61e-4fc9-ac7b-1078bdb95e02_571.mp4" target="_blank" class="video">Video 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>تشارفي — </h3>
   <div class="meta"> | nan | Media: 7</div>
   <div class="media-grid">
@@ -2840,7 +2860,7 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501971/alnafl_media/IMG_0601_578.heic" target="_blank">Photo 7</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>ركن باسل للحلاقة — </h3>
   <div class="meta"> | nan | Media: 2</div>
   <div class="media-grid">
@@ -2848,14 +2868,14 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501974/alnafl_media/IMG_0756_580.heic" target="_blank">Photo 2</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>الهام التصميم للخياطة النسائية — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501976/alnafl_media/IMG_0755_581.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>لؤلؤة الثريا للشقق المخدومه — </h3>
   <div class="meta"> | nan | Media: 7</div>
   <div class="media-grid">
@@ -2868,7 +2888,7 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501984/alnafl_media/IMG_0748_588.heic" target="_blank">Photo 7</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>شريفة المطيري للمياه و المرطبات — </h3>
   <div class="meta"> | nan | Media: 2</div>
   <div class="media-grid">
@@ -2876,7 +2896,7 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501988/alnafl_media/IMG_0747_590.heic" target="_blank">Photo 2</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>أناقة النقل للمستلزمات الرجالية من يوم السبت إلى الخميس 9 صباحا إلى 11 30 مساء — </h3>
   <div class="meta"> | nan | Media: 2</div>
   <div class="media-grid">
@@ -2884,7 +2904,7 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771501993/alnafl_media/IMG_0745_592.heic" target="_blank">Photo 2</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>الكتان النفل للشقق المخدومة — </h3>
   <div class="meta"> | nan | Media: 5</div>
   <div class="media-grid">
@@ -2895,7 +2915,7 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502002/alnafl_media/IMG_0760_597.heic" target="_blank">Photo 5</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>جوهرة النفل للشقق المخدومة — </h3>
   <div class="meta"> | nan | Media: 4</div>
   <div class="media-grid">
@@ -2905,7 +2925,7 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502010/alnafl_media/IMG_0735_601.heic" target="_blank">Photo 4</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>ديالا — </h3>
   <div class="meta"> | nan | Media: 4</div>
   <div class="media-grid">
@@ -2915,7 +2935,7 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502014/alnafl_media/IMG_0726_605.heic" target="_blank">Photo 4</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>لاند مارك للشقق المخدومة — </h3>
   <div class="meta"> | nan | Media: 4</div>
   <div class="media-grid">
@@ -2925,7 +2945,7 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502020/alnafl_media/IMG_0719_609.heic" target="_blank">Photo 4</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>واحة النفل للشق المخدومة — </h3>
   <div class="meta"> | nan | Media: 3</div>
   <div class="media-grid">
@@ -2934,7 +2954,7 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502026/alnafl_media/IMG_0706_612.heic" target="_blank">Photo 3</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>ريبال النفل للشقق المخدومة — </h3>
   <div class="meta"> | nan | Media: 3</div>
   <div class="media-grid">
@@ -2943,14 +2963,14 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502030/alnafl_media/IMG_0705_615.heic" target="_blank">Photo 3</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>Cloud Store — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502031/alnafl_media/IMG_0701_616.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>أماس 18 — </h3>
   <div class="meta"> | nan | Media: 4</div>
   <div class="media-grid">
@@ -2960,14 +2980,14 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502036/alnafl_media/IMG_0699_620.heic" target="_blank">Photo 4</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>مغسلة مهدي ال سليم من السبت إلى الخميس — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502037/alnafl_media/IMG_0691_621.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>Okiro- من السبت الى الاربعاء — </h3>
   <div class="meta"> | nan | Media: 2</div>
   <div class="media-grid">
@@ -2975,28 +2995,28 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502039/alnafl_media/IMG_0689_623.heic" target="_blank">Photo 2</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>أعمال منزلية للتبريد و التكييف من من السبت الى الخميس — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502040/alnafl_media/IMG_0688_624.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>تموينات مروج نجد — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502041/alnafl_media/IMG_0686_625.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>وسامة الرجال للحلاقة الرجالية — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502042/alnafl_media/IMG_0685_626.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>باقة زهور من السبت إلى الخميس من 11 صباحا إلى 11 30 مساء يوم الجمعه من 1 إلى 11 30 مساء — </h3>
   <div class="meta"> | nan | Media: 3</div>
   <div class="media-grid">
@@ -3005,7 +3025,7 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502045/alnafl_media/IMG_0682_629.heic" target="_blank">Photo 3</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>بوفية و عصائر أجمل كوب — </h3>
   <div class="meta"> | nan | Media: 2</div>
   <div class="media-grid">
@@ -3013,7 +3033,7 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502048/alnafl_media/IMG_0680_631.heic" target="_blank">Photo 2</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>مي الشمري للخضار و الفواكه — </h3>
   <div class="meta"> | nan | Media: 2</div>
   <div class="media-grid">
@@ -3021,7 +3041,7 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502052/alnafl_media/IMG_0677_633.heic" target="_blank">Photo 2</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>مغاسل ابراهيم الدوسري من من السبت إلى الجمعة من ٥ ٣٠ صباحا إلى ١١ ٣٠ مساء — </h3>
   <div class="meta"> | nan | Media: 2</div>
   <div class="media-grid">
@@ -3029,7 +3049,7 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502056/alnafl_media/IMG_0676_635.heic" target="_blank">Photo 2</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>هبة الزنيدي للبطاريات من السبت إلى الجمعة من ٩ صباحا إلى ١١ ونص مساء — </h3>
   <div class="meta"> | nan | Media: 3</div>
   <div class="media-grid">
@@ -3038,7 +3058,7 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502062/alnafl_media/IMG_0672_638.heic" target="_blank">Photo 3</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>خالد المطيري للإلكترونيات من السبت إلى الخميس 9 صباحا 12 مساء الشفت الثاني من 3   30 مساء 11 30 مساء — </h3>
   <div class="meta"> | nan | Media: 2</div>
   <div class="media-grid">
@@ -3046,42 +3066,42 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502067/alnafl_media/IMG_0671_640.heic" target="_blank">Photo 2</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>عبدالله الصبيحي للعقارات من السبت إلى الخميس 4مساء إلى 10 30 يوم الجمعه اجازة — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502070/alnafl_media/IMG_0669_641.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>ماتيرا — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502071/alnafl_media/IMG_0655_642.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>مغسلة وفاء ال سليم — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502072/alnafl_media/460eca9a-94b9-4ef7-9800-bfed02dd160e_643.jpg" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>عبدالله الوابلي للمقاولات المعمارية — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502074/alnafl_media/fc87548e-249b-4cac-89d6-ea81d3f8c892_644.jpg" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>خدمات المسافر العالمية — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502076/alnafl_media/dc418c8d-f80b-48df-ac3a-cd3adf33a1a0_645.jpg" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>صيدلية الجازع — </h3>
   <div class="meta"> | nan | Media: 3</div>
   <div class="media-grid">
@@ -3090,7 +3110,7 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502081/alnafl_media/d217e335-8c95-45d4-b33c-92f29e874473_648.jpg" target="_blank">Photo 3</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>بوفية مسهي كوب — </h3>
   <div class="meta"> | nan | Media: 3</div>
   <div class="media-grid">
@@ -3099,7 +3119,7 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502088/alnafl_media/be2a7f52-918c-44b7-bbb7-3d7f47cec602_651.jpg" target="_blank">Photo 3</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>العالم الافتراضي — </h3>
   <div class="meta"> | nan | Media: 3</div>
   <div class="media-grid">
@@ -3108,7 +3128,7 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502092/alnafl_media/7fdae274-002e-40a5-8e4c-8a82c6b1f96f_654.jpg" target="_blank">Photo 3</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>مكارم النفل للشقق المخدومه — </h3>
   <div class="meta"> | nan | Media: 5</div>
   <div class="media-grid">
@@ -3119,42 +3139,42 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502098/alnafl_media/1310b897-7990-49f4-90d7-a47f45d5631b_659.jpg" target="_blank">Photo 5</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>الوردة الشامية للخياطة النسائية- من يوم السبت إلى الخميس — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502099/alnafl_media/IMG_0634_660.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>سنبل الطيب -كل ايام الاسبوع — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502100/alnafl_media/IMG_0633_661.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>مغاسل إبراهيم الدوسري -كل ايام الاسبوع- من ٥  ٣٠ م إلى  ١١ ٣٠ م — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502101/alnafl_media/IMG_0632_662.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>أشواق المطري للتبريد و التكييف — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502103/alnafl_media/IMG_0631_663.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>ضيافة الطيب للعود و العطور — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502104/alnafl_media/IMG_0628_664.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>زهر النفل -كل ايام الأسبوع — </h3>
   <div class="meta"> | nan | Media: 3</div>
   <div class="media-grid">
@@ -3163,28 +3183,28 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502112/alnafl_media/IMG_0626_667.heic" target="_blank">Photo 3</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>الذوق الفريد للخياطة النسائية- من السبت الى الخميس ٩ ص إلى ١٢ م الشفت الثاني من ٤م إلى ١١ ٣٠ — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502113/alnafl_media/IMG_0624_668.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>صراف آلي مصرف الراجي — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502115/alnafl_media/IMG_0619_669.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>مركز رادكير الطبي — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502116/alnafl_media/IMG_0607_670.heic" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>اوف وايت — </h3>
   <div class="meta"> | nan | Media: 2</div>
   <div class="media-grid">
@@ -3192,14 +3212,14 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502119/alnafl_media/IMG_0577_672.heic" target="_blank">Photo 2</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>بوان — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502120/alnafl_media/IMG_4602_673.jpg" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>محركي لخدمات السيارة — </h3>
   <div class="meta"> | nan | Media: 2</div>
   <div class="media-grid">
@@ -3207,7 +3227,7 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502123/alnafl_media/1e5ada75-1785-433e-84c7-4cea0a30e8eb_675.jpg" target="_blank">Photo 2</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>روش لغسيل السيارت — </h3>
   <div class="meta"> | nan | Media: 2</div>
   <div class="media-grid">
@@ -3215,7 +3235,7 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502126/alnafl_media/0c4db697-ed2c-4c19-bb2c-17944bc0d92b_677.jpg" target="_blank">Photo 2</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>وقت اللياقة — </h3>
   <div class="meta"> | nan | Media: 2</div>
   <div class="media-grid">
@@ -3223,105 +3243,105 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502128/alnafl_media/b944e36c-7701-4bb4-a9cd-76f19ad9f346_679.jpg" target="_blank">Photo 2</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>إراف الطبية — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502129/alnafl_media/fa55161d-c962-44fc-a3de-7a323b51fc30_680.jpg" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>صقر للمقاولات — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502131/alnafl_media/326013b6-8df7-4195-8604-e0dfae4d9484_681.jpg" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>الحرف المميزة — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502132/alnafl_media/04aa2ef2-be21-4690-9743-0c2708a9955b_682.jpg" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>كوكب المريخ — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502133/alnafl_media/fa990614-a105-4712-95c9-380f8a90bb0d_683.jpg" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>الكوادر الذكية لخزائن غرف النوم — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502135/alnafl_media/aeb2e2dd-f616-4c6c-a939-eb4164a9bd45_684.jpg" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>تعمير السعودية — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502136/alnafl_media/d5b90ee2-d7f0-4a2c-89d6-413797780a24_685.jpg" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>ابتكار المباني — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502139/alnafl_media/75b93a38-e04d-4d2c-b312-048f669092fa_686.jpg" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>المتميز العالمي للصناعة — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502142/alnafl_media/d6de5d40-d2a5-4e3f-b81f-97abbc36eeb9_687.jpg" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>الصلال لمواد وأدوات النظافة — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502143/alnafl_media/4a408258-27f6-435e-a090-6faabf788725_688.jpg" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>مركز آد للتدريب — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502145/alnafl_media/de03da83-6b6f-48dd-97d7-f385d8406a69_689.jpg" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>تقنية المجرة — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502146/alnafl_media/e492fddf-4cac-4c9e-8b33-ac5c94d75f20_690.jpg" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>وكالة زحل للدعاية والإعلان -من الاحد للخميس 8 30ص الى 5 30م السبت والجمعة مغلق — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502147/alnafl_media/4713c959-37a4-45cd-972a-b98a8136950a_691.jpg" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>الأبعاد المعمارية للهندسة المعمارية -من الاحد للخميس 8 30ص الى 5 30م السبت والجمعة مغلق — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502149/alnafl_media/d7a8b156-033d-4d97-aba7-92262c8e53e6_692.jpg" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>THE SENSE — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502150/alnafl_media/a37d6d07-4347-4797-ad3d-ecd403fcbc56_693.jpg" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>نخبة ألماس لتقويم وزراعة الاسنان — </h3>
   <div class="meta"> | nan | Media: 2</div>
   <div class="media-grid">
@@ -3329,28 +3349,28 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502153/alnafl_media/130f814a-14bb-4629-a5fa-7abb8e83665b_695.jpg" target="_blank">Photo 2</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>مركز لطف الإنسان الطبي — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502154/alnafl_media/943dec9d-3937-451c-a82d-affdb290b358_696.jpg" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>كنز غرناطة للألمنيوم والحديد والاستانلس — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502155/alnafl_media/89daba38-e31e-4b6d-9b2e-61b2b9bc79c9_697.jpg" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>رمز الشمال — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502156/alnafl_media/951fcd83-0005-4767-b134-93173ddf9260_698.jpg" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>أسواق لي مارت — </h3>
   <div class="meta"> | nan | Media: 5</div>
   <div class="media-grid">
@@ -3361,7 +3381,7 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502164/alnafl_media/4f3fef8a-f475-4c90-92e7-c68cbde6559f_703.jpg" target="_blank">Photo 5</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>اضواء النفل لتقديم الوجبات — </h3>
   <div class="meta"> | nan | Media: 3</div>
   <div class="media-grid">
@@ -3370,7 +3390,7 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502179/alnafl_media/4c13bcdb-3560-497e-8036-3968cf87f3b2_706.jpg" target="_blank">Photo 3</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>نبت الخير للخضار والفواكه والتمور — </h3>
   <div class="meta"> | nan | Media: 3</div>
   <div class="media-grid">
@@ -3379,42 +3399,42 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502183/alnafl_media/cbea0194-5c8d-42ad-803a-2f1defdb7f99_709.jpg" target="_blank">Photo 3</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>ماجد بن عبدالرحمن  الحقباني العقارية — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502184/alnafl_media/472c2208-27fb-4669-ae73-3d99ad08f785_710.jpg" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>جافا قايز — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502186/alnafl_media/1dca79cf-33cb-4c5f-a8a9-ba3fd6f46877_711.jpg" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>DOUGHNUT — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502187/alnafl_media/18fdc2f7-13f7-4d2f-bfc5-06ade110c2cf_712.jpg" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>الشبل الأبيض التجارية — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502189/alnafl_media/45065890-a0de-4b7b-b6ed-84d9a5451a2b_713.jpg" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>دار الوسيلة للمقاولات — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502190/alnafl_media/b020aaa1-d648-4aac-bde3-3a81ebcff409_714.jpg" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>تموينات أنوار النفل — </h3>
   <div class="meta"> | nan | Media: 2</div>
   <div class="media-grid">
@@ -3422,21 +3442,21 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502192/alnafl_media/d4b34d6a-0451-4e07-bd28-775da343b97e_716.jpg" target="_blank">Photo 2</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>بترومين اكسبرس — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502194/alnafl_media/3e0f9c14-c783-4562-9ff7-239027d7d79d_717.jpg" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>الإطار الفضي — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502195/alnafl_media/d7765311-6631-44bd-a79e-c31ed3690de5_718.jpg" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>علوم السندويش — </h3>
   <div class="meta"> | nan | Media: 3</div>
   <div class="media-grid">
@@ -3445,14 +3465,14 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502200/alnafl_media/b98482c1-faef-46a9-aab4-2c400dea064e_721.jpg" target="_blank">Photo 3</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>دار ديرم للتزين النسائى — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502202/alnafl_media/86b5572d-8901-4b44-a12d-9ca03170d81d_722.jpg" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>Roastree Coffee — </h3>
   <div class="meta"> | nan | Media: 4</div>
   <div class="media-grid">
@@ -3462,7 +3482,7 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502208/alnafl_media/aeb7817f-9063-491a-b3b4-9b89a660a4aa_726.jpg" target="_blank">Photo 4</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>شاي عزيز — </h3>
   <div class="meta"> | nan | Media: 4</div>
   <div class="media-grid">
@@ -3472,7 +3492,7 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502213/alnafl_media/04bb94ba-a3c0-459b-b584-5f90743f3403_730.jpg" target="_blank">Photo 4</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>حلاق شرار ذهين الحبردي — </h3>
   <div class="meta"> | nan | Media: 2</div>
   <div class="media-grid">
@@ -3480,14 +3500,14 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502215/alnafl_media/8d757d13-701e-4240-b9b9-19c4962c299c_732.jpg" target="_blank">Photo 2</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>مغاسل ريم  أل تويم — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502217/alnafl_media/3d50d9e8-8b11-4055-8bfd-f15cf56428f8_733.jpg" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>أسواق مخابز سنابل المزارع — </h3>
   <div class="meta"> | nan | Media: 7</div>
   <div class="media-grid">
@@ -3500,7 +3520,7 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502233/alnafl_media/e63b4590-3de5-43fc-9c38-d22f052a8811_740.jpg" target="_blank">Photo 7</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>مغاسل الضيف — </h3>
   <div class="meta"> | nan | Media: 4</div>
   <div class="media-grid">
@@ -3510,7 +3530,7 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502239/alnafl_media/3e0da331-36cf-420e-90fd-1809b353ca5c_744.jpg" target="_blank">Photo 4</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>صولا للحلاقة — </h3>
   <div class="meta"> | nan | Media: 2</div>
   <div class="media-grid">
@@ -3518,21 +3538,21 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502242/alnafl_media/420fc8cc-987c-42cc-8def-f5976f49b82a_746.jpg" target="_blank">Photo 2</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>حصه النفيعي للديكور الخبشي — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502243/alnafl_media/6b5fe14e-ee0e-4d37-a438-3137332c6022_747.jpg" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>ورشة منيره العتيبي لتصليح الدراجات الهوائية — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502245/alnafl_media/3bcbfeab-75ed-41a2-a175-24ad85ff1b34_748.jpg" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>إياد زهور وشوكولا- كل ايام الأسبوع — </h3>
   <div class="meta"> | nan | Media: 3</div>
   <div class="media-grid">
@@ -3541,42 +3561,42 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502251/alnafl_media/bbc7ad80-5bc8-41eb-9a69-e1ce432f8212_751.jpg" target="_blank">Photo 3</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>ناتل المباني والحدائق للمقاولات — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502252/alnafl_media/5b701a79-8047-420e-9030-0eb563bdb352_752.jpg" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>مغاسل المسعود — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502254/alnafl_media/1efcf437-58cd-45b8-9e9c-bf9f9e7e6e10_753.jpg" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>حلاق السجل للحلاقة — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502255/alnafl_media/069ca67f-f0c3-4884-9676-153a816eaf46_754.jpg" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>سطام الذيابي خياط نسائي — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502257/alnafl_media/5b775260-d212-4dd2-ba0a-c4399fdd2d7a_755.jpg" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>النموذج العالي — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502258/alnafl_media/1b820e8b-6c29-4d03-8ea3-843d697fd482_756.jpg" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>تموينات قمراء العتيبي — </h3>
   <div class="meta"> | nan | Media: 2</div>
   <div class="media-grid">
@@ -3584,7 +3604,7 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502261/alnafl_media/e63b4590-3de5-43fc-9c38-d22f052a8811_758.jpg" target="_blank">Photo 2</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>كيف كشمير — </h3>
   <div class="meta"> | nan | Media: 3</div>
   <div class="media-grid">
@@ -3593,14 +3613,14 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502265/alnafl_media/1b44530d-65ff-4b70-b7de-41a59b5e3a04_761.jpg" target="_blank">Photo 3</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>نايف الشيباني للنجارة — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502267/alnafl_media/0b10fd66-2eed-4be0-95c7-6692bb702e98_762.jpg" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>قهوة عمق — </h3>
   <div class="meta"> | nan | Media: 6</div>
   <div class="media-grid">
@@ -3612,21 +3632,21 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502275/alnafl_media/b6d67df2-0c27-43f6-954a-a0aa5248c9cc_768.jpg" target="_blank">Photo 6</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>قافية الشاي أتاي موريتاني أصيل — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502276/alnafl_media/a302a4d7-f26f-466c-a28d-db48fc19cb67_769.jpg" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>صالون نسائي راقي ورائع — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502278/alnafl_media/f6f5054d-6fef-46d7-9511-a6472a997d10_770.jpg" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>ورق لذة ولمة عنب — </h3>
   <div class="meta"> | nan | Media: 3</div>
   <div class="media-grid">
@@ -3635,7 +3655,7 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502284/alnafl_media/74ffadb3-6adb-4369-8254-4564c49e2771_773.jpg" target="_blank">Photo 3</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>الخبز البسيط لخدمات الاعاشة — </h3>
   <div class="meta"> | nan | Media: 2</div>
   <div class="media-grid">
@@ -3643,28 +3663,28 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502287/alnafl_media/6b781cfc-e769-4ca5-acbd-8c6755dae7be_775.jpg" target="_blank">Photo 2</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>صالون ثلاث شفرات للحلاقة — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502288/alnafl_media/8d350a1a-d8d9-4f8c-8e71-a891fce36dac_776.jpg" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>مكتبة مزايا الفارس — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502289/alnafl_media/9f4a159d-c895-4d6f-8e06-51c5d941d8da_777.jpg" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>مغاسل أهداف النجوم — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/image/upload/v1771502291/alnafl_media/493c247e-67d6-4d81-9bf1-01414969553c_778.jpg" target="_blank">Photo 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>Saral- سارال — </h3>
   <div class="meta"> | nan | Media: 3</div>
   <div class="media-grid">
@@ -3673,21 +3693,21 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/video/upload/v1771502305/alnafl_media/IMG_1852_781.mov" target="_blank" class="video">Video 3</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>زارو — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/video/upload/v1771502310/alnafl_media/IMG_1846_782.mov" target="_blank" class="video">Video 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>Noga Nach — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/video/upload/v1771502314/alnafl_media/IMG_2216_783.mov" target="_blank" class="video">Video 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>سباء الرئدة لغيار الزيت — </h3>
   <div class="meta"> | nan | Media: 2</div>
   <div class="media-grid">
@@ -3695,7 +3715,7 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/video/upload/v1771502323/alnafl_media/IMG_2204_785.mov" target="_blank" class="video">Video 2</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>جوهرة النفل للحوم الطازجة — </h3>
   <div class="meta"> | nan | Media: 2</div>
   <div class="media-grid">
@@ -3703,70 +3723,70 @@
     <a href="https://res.cloudinary.com/dn3bxmi9r/video/upload/v1771502332/alnafl_media/IMG_2173_787.mov" target="_blank" class="video">Video 2</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>روائع الجلد لاصلاح الاحذية و الحقائب و الجلديات — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/video/upload/v1771502336/alnafl_media/IMG_2166_788.mov" target="_blank" class="video">Video 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>لمسة لمعة للتبريد و التكييف و لف الدينمو — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/video/upload/v1771502341/alnafl_media/IMG_2156_789.mov" target="_blank" class="video">Video 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>ناصر الفائز للسباكة و الكهرباء — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/video/upload/v1771502345/alnafl_media/IMG_2144_790.mov" target="_blank" class="video">Video 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>روان الخليف للسباكة و الكهرباء — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="https://res.cloudinary.com/dn3bxmi9r/video/upload/v1771502354/alnafl_media/IMG_2140_791.mov" target="_blank" class="video">Video 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>احتياجات الحيوان — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="#" title="File not found" target="_blank" class="video">Video 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>محامص و بهارات العالم — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="#" title="File not found" target="_blank" class="video">Video 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>خلاد البشر لخدمات الكمبيوتر — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="#" title="File not found" target="_blank" class="video">Video 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>هوادي المحدودة — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="#" title="File not found" target="_blank" class="video">Video 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>على كيفك — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
     <a href="#" title="File not found" target="_blank" class="video">Video 1</a>
   </div>
 </div>
-<div class="poi" data-media="1">
+<div class="poi" data-media="1" data-district="alnafl">
   <h3>دار الاميرات — </h3>
   <div class="meta"> | nan | Media: 1</div>
   <div class="media-grid">
@@ -3784,10 +3804,12 @@
     const LOCAL_TAGS_KEY = "alnafl_media_tags";
     const CUSTOM_TAGS_KEY = "alnafl_custom_tags";
 
+    const DISTRICT_LABELS = { alnafl: 'Al Nafl' };
     let currentPOIs = [];
     let activeFilter = 'all';
     let activeTagFilter = '';
     let activeMediaTypeFilter = '';
+    let activeDistrictFilter = '';
     let searchQuery = '';
 
     let lbCurrentPOI = null;
@@ -3828,10 +3850,11 @@
             }));
 
             const hasMedia = p.dataset.media === "1";
+            const district = p.dataset.district || '';
             const category = meta.split('|')[0].trim() || '-';
             const status = meta.toLowerCase().includes('open') ? 'Open' : 'Closed';
 
-            return { id: idx, title, category, status, hasMedia, mediaLinks };
+            return { id: idx, title, category, status, hasMedia, district, mediaLinks };
         });
     }
 
@@ -3866,6 +3889,7 @@
         const userTags = JSON.parse(localStorage.getItem(LOCAL_TAGS_KEY) || '{}');
 
         const filtered = currentPOIs.filter(p => {
+            const matchesDistrict = !activeDistrictFilter || p.district === activeDistrictFilter;
             const matchesSearch = !searchQuery || p.title.toLowerCase().includes(searchQuery.toLowerCase()) || p.category.toLowerCase().includes(searchQuery.toLowerCase());
             const matchesGlobal = (activeFilter === 'all') || (activeFilter === 'media' && p.hasMedia) || (activeFilter === 'no-media' && !p.hasMedia);
 
@@ -3891,7 +3915,7 @@
                 }
             }
 
-            return matchesSearch && matchesGlobal && matchesTag && matchesMediaType;
+            return matchesDistrict && matchesSearch && matchesGlobal && matchesTag && matchesMediaType;
         });
 
         function matchesTypeFilter(href, filterType) {
@@ -3955,7 +3979,8 @@
         }).join('');
 
         document.getElementById('stat-pois').innerText = filtered.length;
-        document.getElementById('stat-media').innerText = currentPOIs.reduce((s,p) => s + p.mediaLinks.filter(m => !m.isPublic && m.href && m.href !== '#').length, 0);
+        const scopedPOIs = activeDistrictFilter ? currentPOIs.filter(p => p.district === activeDistrictFilter) : currentPOIs;
+        document.getElementById('stat-media').innerText = scopedPOIs.reduce((s,p) => s + p.mediaLinks.filter(m => !m.isPublic && m.href && m.href !== '#').length, 0);
 
         document.querySelectorAll('.carousel-track').forEach(tr => {
             const ind = document.getElementById(tr.id + '-ind');
@@ -3967,6 +3992,23 @@
     function handleSearch() {
         searchQuery = document.getElementById('search-input').value;
         renderGrid();
+    }
+
+    function setDistrictFilter(d) {
+        activeDistrictFilter = d;
+        renderGrid();
+    }
+
+    function populateDistricts() {
+        const districts = [...new Set(currentPOIs.map(p => p.district).filter(Boolean))].sort();
+        const select = document.getElementById('district-select');
+        select.innerHTML = '<option value="">All Districts</option>';
+        districts.forEach(d => {
+            const opt = document.createElement('option');
+            opt.value = d;
+            opt.textContent = DISTRICT_LABELS[d] || d;
+            select.appendChild(opt);
+        });
     }
 
     function setFilter(f) {
@@ -4090,6 +4132,7 @@
 
     window.onload = () => {
         currentPOIs = extractData();
+        populateDistricts();
         refreshTagFilters();
         renderGrid();
     };
